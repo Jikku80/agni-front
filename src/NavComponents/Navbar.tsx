@@ -42,7 +42,7 @@ const BookButton = style.button`
 `
 
 const Navbar = () => {
-  const navValues = ['HOME', 'SERVICES', 'SPECIALIST', 'BLOG', 'CONTACT US']
+  const navValues = ['HOME', 'SERVICES', 'SPECIALIST', 'LOGIN', 'CONTACT US']
 
   const [isActive, setIsActive] = useState(-1);
 
@@ -58,7 +58,7 @@ const Navbar = () => {
             if (item == "HOME") navigate('/')
             if (item == "SERVICES") navigate('/services')
             if (item == "SPECIALIST") navigate('/specialist')
-            if (item == "BLOG") navigate('/blog')
+            if (item == "LOGIN") navigate('/login')
             if (item == "CONTACT US") navigate('/contact-us')
             
           }}>{item}</Anchor>)}
