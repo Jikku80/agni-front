@@ -41,7 +41,7 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
   return (
     <div>
         <PatientAllUpdateForm nameRef={nameRef} genderRef={genderRef} emailRef={emailRef} phoneRef={phoneRef} addressRef={addressRef} ageRef={ageRef} setLoading={setLoading} setAllPatient={setAllPatient}/>
-        <TableContainer  className="tableBody" mx={4}>
+        <TableContainer mx={4}>
             <Table variant='simple'>
                 {
                     showComponent == true && <TableCaption>{Object.keys(allPatient).length} Patients</TableCaption>

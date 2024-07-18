@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api":  {
-        target: `agni.azurewebsites.net`,
+        target: `https://agnibackend.azurewebsites.net`,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
