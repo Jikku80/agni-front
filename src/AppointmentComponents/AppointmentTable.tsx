@@ -19,6 +19,7 @@ interface Props{
         date: string;
         time: string;
         accepted: boolean;
+        branch: string;
     }[]>>,
     appointment : {
         _id: string;
@@ -30,6 +31,7 @@ interface Props{
         date: string;
         time: string;
         accepted: boolean;
+        branch: string;
     }[],
     showComponent : boolean
 }
@@ -53,13 +55,14 @@ const AppointmentTable = ({setLoading, current, setAppointment, appointment, sho
                 <Th>Specialist</Th>
                 <Th>Date</Th>
                 <Th>Time</Th>
+                <Th>Branch</Th>
                 <Th>Accept</Th>
                 {
                     current == 'superuser' && <Th>Delete</Th>
                 }
             </Tr>
             </Thead>
-            <Tbody className='tableBody'>
+            <Tbody>
                 {showComponent == true && Object.entries(appointment).map(([key, item], i) => <Tr key={Math.random() + key}>
                     <Td className='smpx' key={i + 1}>{i + 1}</Td>
                     <Td className='smpx' key={i + 1 + item.name}>{item.name}</Td>
@@ -111,6 +114,7 @@ const AppointmentTable = ({setLoading, current, setAppointment, appointment, sho
                     <Td className='smpx' key={Date.now() + item.specialist}>{item.specialist}</Td>
                     <Td className='smpx' key={Date.now() + (i + 1)}>{item.date}</Td>
                     <Td className='smpx' key={Date.now() + item.time}>{item.time}</Td>
+                    <Td className='smpx' key={item._id + i + key}>{item.branch}</Td>
                     <Td key={Date.now() + item._id}>{
                         item.accepted == false ? <Button size="sm" colorScheme='green' onClick = {async() => {
                             setLoading(true);
@@ -156,6 +160,7 @@ const AppointmentTable = ({setLoading, current, setAppointment, appointment, sho
                 <Th>Specialist</Th>
                 <Th>Date</Th>
                 <Th>Time</Th>
+                <Th>Branch</Th>
                 <Th>Accept</Th>
                 {
                     current == 'superuser' && <Th>Delete</Th>

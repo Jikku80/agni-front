@@ -11,6 +11,7 @@ const AllAppointments = async(setLoading : (value: SetStateAction<boolean>) => v
     date: string;
     time: string;
     accepted: boolean;
+    branch: string;
 }[]>) => void, endPoint : string ) => {
     await axios.get(endPoint, {withCredentials: true})
     .then(item => {

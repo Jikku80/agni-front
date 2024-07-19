@@ -15,6 +15,7 @@ interface Props{
         date: string;
         time: string;
         accepted: boolean;
+        branch: string;
     }[]>>,
     setLoading : React.Dispatch<React.SetStateAction<boolean>>,
     setSearchVal : React.Dispatch<SetStateAction<string>>,

@@ -14,6 +14,9 @@ interface Props{
         gender: string;
         address: string;
         phone: string;
+        opdno: string;
+        branch: string;
+        uopd: string;
     }[]>>,
     setSearchVal: React.Dispatch<React.SetStateAction<string>>,
     setTotalPage : React.Dispatch<SetStateAction<number>>,

@@ -31,7 +31,7 @@ function App() {
       <Navbar />
       {isLoading && <Loading />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setLoading = {setLoading}/>} />
         <Route path="services" element={<Service />} />
         <Route path="specialist" element={<Specialist />} />
         <Route path="blog" element={<Blog />} />

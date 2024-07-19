@@ -35,7 +35,7 @@ const AppointmentContent = ({ setEntity, setLoading} : Props) => {
     const [current, setCurrent] = useState('');
     const [showComponent, setShowComponent] = useState(false);
     const [appointment, setAppointment] = useState([{
-      _id : '', name : '', email : '', phone: '', message : '', specialist : '', date : '', time : '', accepted : false
+      _id : '', name : '', email : '', phone: '', message : '', specialist : '', date : '', time : '', accepted : false, branch: ''
     }])
     const [newAddition, setNewAddition] = useState(false);
     const [searchVal, setSearchVal] = useState('')

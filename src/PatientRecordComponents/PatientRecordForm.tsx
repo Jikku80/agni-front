@@ -126,7 +126,6 @@ const PatientRecordForm = ({setLoading, setPatientRecord, problemRef, subProblem
                     }else{
                         subValue = "None"
                     }
-                    
                     await axios.post(`${import.meta.env.VITE_NODE_URL}/api/patient/record/createRecord/${num}`,{
                         problem : problemRef.current?.value,
                         subProblem : subValue,

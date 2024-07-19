@@ -1,0 +1,291 @@
+import { Button, FormControl, FormLabel, HStack, Input, Select, Stack, Textarea, VStack} from "@chakra-ui/react"
+import {useForm, SubmitHandler} from "react-hook-form";
+import { SiTicktick } from "react-icons/si";
+import axios from 'axios';
+import React, { useState } from "react";
+import style from 'styled-components';
+import io from 'socket.io-client'
+import brace from '../../public/brace.png';
+import gap from '../../public/gap.png';
+
+const FlexDiv = style.div`
+    margin-top: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display : flex;
+`
+
+const FormDiv = style.div`
+    background-color : #3182ce;
+    width : 60%;
+    padding : 4%;
+    border-radius : .5rem;
+`
+
+const HalfDiv = style.div`
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    padding-left : 2%;
+`
+
+const ContentDiv= style.div`
+    background-color : #80808073;
+    padding : 4%;
+    border-radius : .5rem;
+    text-align : justify;
+`
+
+const Modal = style.div`
+    height : 100vh;
+    width : 100vw;
+    position : fixed;
+    top : 0;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    background-color: #0003;;
+`
+
+const ModalBody = style.div`
+    background-color : white;
+    color : #4A5568;
+    padding : 2%;
+    border-radius : 10px;
+    display: flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+`
+
+const ModalButton = style.button`
+    background-color : #eaeaea;
+    color : #4A5568;
+    border-radius : 10px;
+    padding : 2%;
+    margin-top : 2%;
+    width: fit-content;
+
+    &:hover{
+    background-color : #bfbfbf;
+    }
+`
+
+const ErrorMsg = style.p`
+    color : crimson;
+    font-size: 12px;
+`
+
+const  Head = style.h1`
+    font-size : 28px;
+    margin-bottom : 16px;
+    font-weight : 600;
+    display : flex;
+`
+
+const Blue = style.span`
+    color :#3182ce;
+    margin-left : 8px;
+`
+
+const BraceImage = style.img`
+    position : absolute;
+    top : 260vh;
+    right :.5vw;
+`
+
+const GapImage = style.img`
+    position : absolute;
+    top : 245vh;
+    right :25vw;
+`
+
+interface Props{
+    setLoading : React.Dispatch<React.SetStateAction<boolean>>
+}
+
+interface Appointment {
+    name : String,
+    email : String,
+    phone : Number,
+    message : String,
+    specialist : String,
+    date : String,
+    time : String,
+    branch: String
+}
+
+const Book = ({setLoading} : Props) => {
+    const time = ["10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM"]
+    
+    const {register, handleSubmit, formState : {errors}} = useForm<Appointment>();
+    const socket = io(`${import.meta.env.VITE_NODE_URL}`, {autoConnect : false})
+
+    const [availableTime, setAvailableTime] = useState({time});
+    const [updateTime, setUpdateTime] = useState(false);
+    const [newPlaceholder, setNewPlaceholder] = useState('---Select A Date First---');
+
+    const onSubmit: SubmitHandler<Appointment> = async (data : any) => {
+        setLoading(true)
+        await axios.post(`${import.meta.env.VITE_NODE_URL}/api/appointment/`, {
+            name : data.name,
+            email : data.email,
+            phone : data.phone,
+            message: data.message,
+            specialist : data.specialist,
+            date : data.date,
+            time : data.time,
+            branch: data.branch,
+            createdAt : Date.now()
+        }, {withCredentials: true})
+            .then((response) => {
+                if (response.status == 201){
+                    data = response.data.appointment
+                    let successModal = document.querySelector(".successModal");
+                    successModal?.classList.remove("hidden");
+                    socket.connect();
+                    socket.emit('chat message', true);
+                    setTimeout(() => {
+                        successModal?.classList.add("hidden");
+                        socket.disconnect();
+                    },5000)
+                }
+                setLoading(false)
+            }).catch(err => {
+                console.log('Error!!!', err)
+                setLoading(false)
+            })
+    }
+  return (
+    <FlexDiv>
+        <BraceImage src={brace}/>
+        <GapImage src={gap}/>
+        <FormDiv>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <FormControl className="bookForm" m={4}>
+                    <HStack my={4} justifyContent="space-between">
+                        <FormLabel className="white sizedlabel">Name</FormLabel>
+                        <VStack w="80%">
+                            <Input className="white sizedbox" type='text' placeholder='Enter your name' w="90%" {...register('name', {required: true})}/>
+                            {
+                                errors.name && <ErrorMsg>Please provide your name!</ErrorMsg>
+                            }
+                        </VStack>
+                        <FormLabel className="white sizedlabel">Email</FormLabel>
+                        <VStack w="80%">    
+                            <Input className="white sizedbox" type='email' placeholder='Enter your email' w="90%" {...register('email', {required: true})}/>
+                            {
+                                errors.email && <ErrorMsg>Please provide your email address!</ErrorMsg>
+                            }
+                        </VStack>
+                    </HStack>
+                    <HStack my={4}>
+                        <FormLabel className="white sizedlabel">Phone</FormLabel>
+                        <VStack w="80%">
+                            <Input className="white sizedbox" type='number' placeholder='Enter phone number' w="90%" {...register('phone', {required: true})}/>
+                            {
+                                errors.phone && <ErrorMsg>Please provide your phone number!</ErrorMsg>
+                            }
+                        </VStack>
+                        <FormLabel className="white sizedlabel">Specialist</FormLabel>
+                        <VStack w="80%">
+                            <Stack spacing={3} w="90%">
+                                <Select className="white sizedbox" placeholder='---Select Doctor---' {...register('specialist', {required: true})}>
+                                    <option className="lightColot" value='Dr. James Maharjan'>Dr. James Maharjan</option>
+                                    <option className="lightColot" value='Dr. Aaishma Shrestha'>Dr. Aaishma Shrestha</option>
+                                    <option className="lightColot" value='Dr. Udikshya Maharjan'>Dr. Udikshya Maharjan</option>
+                                    <option className="lightColot" value='new'>New In Agni</option>
+                                </Select>
+                            </Stack>
+                            {
+                                errors.specialist && <ErrorMsg>Please pick a Doctor!</ErrorMsg>
+                            }
+                        </VStack>
+                    </HStack>
+                    <HStack>
+                        <FormLabel className="white sizedlabel">Message</FormLabel>
+                        <VStack>
+                            <Textarea my={4} className="txtArea white sizedbox" placeholder='Enter your problem...' size='sm' w="98%" {...register('message', {required: true})}/>
+                            {
+                                errors.message && <ErrorMsg>Please write a message about your problem!</ErrorMsg>
+                            } 
+                        </VStack>
+                        <FormLabel className="white sizedlabel">Branch</FormLabel>
+                        <VStack>
+                            <Stack spacing={3} w="100%">
+                                <Select className="white sizedbox" placeholder='---Select Branch---' {...register('branch', {required: true})}>
+                                    <option className="lightColot" value='pulchowk'>Pulchwok</option>
+                                    <option className="lightColot" value='kuleshwor'>Kuleshwor</option>
+                                </Select>
+                            </Stack>
+                            {
+                                errors.branch && <ErrorMsg>Please pick a Branch!</ErrorMsg>
+                            }
+                        </VStack>
+                    </HStack>
+                    <HStack my={4}>
+                        <FormLabel className="white sizedlabel">Date</FormLabel>
+                        <VStack w="80%">
+                            <Input className="white sizedbox" type='date' w="90%" {...register('date', {required: true})} onChange={async(e) => {
+                                setLoading(true);
+                                await axios.get(`${import.meta.env.VITE_NODE_URL}/api/appointment/getAllTime/${e.target.value}`, { withCredentials: false })
+                                    .then((item:any) => {
+                                    const {data} = item;
+                                    const fetchedTime = data.time;
+                                    fetchedTime.filter((item:any) => {
+                                        time.splice(time.indexOf(item), 1);
+                                    })
+                                    
+                                    setAvailableTime({time})
+                                    setUpdateTime(true)
+                                    setNewPlaceholder('---Available Times---')
+                                    setLoading(false);
+                                    }).catch(Error => {
+                                    setLoading(false);
+                                    console.log('Error', Error)
+                                    })
+                            }}/>
+                            {
+                                errors.date && <ErrorMsg>Please pick a Date!</ErrorMsg>
+                            }
+                        </VStack>
+                        <FormLabel className="white sizedlabel">Time</FormLabel>
+                        <VStack w="80%">
+                            <Stack spacing={3} w="90%">
+                                <Select className="white timeAvailable sizedbox" placeholder={newPlaceholder} {...register('time', {required: true})}>
+                                    {
+                                        updateTime && Object.entries(availableTime).map(([key, el], i) => el.map (item => <option key={key + i} className="lightColot" value={item}>{item}</option>))
+                                    }
+                                </Select>
+                            </Stack>
+                            {
+                                errors.time && <ErrorMsg>Please pick a time!</ErrorMsg>
+                            }
+                        </VStack>
+                    </HStack>
+                    <Button type="submit" my={2}>Book</Button>
+                </FormControl>
+            </form>
+            <Modal className = "successModal hidden">
+                <ModalBody>
+                    <p>Your booking has been requested, Please keep an eye on your mail for confirmation.</p>
+                    <SiTicktick className="tick" />
+                    <ModalButton onClick={() => {
+                        let successModal = document.querySelector(".successModal");
+                        successModal?.classList.add("hidden");
+                    }}>Close</ModalButton>
+                </ModalBody>
+            </Modal>
+        </FormDiv>
+        <HalfDiv>
+            <Head>Make an<Blue>Appointment</Blue></Head>
+            <ContentDiv>
+                Making an appointment with Agni Dental is a smart choice for anyone seeking top-notch dental care. With a team of highly skilled and experienced dental professionals, Agni Dental is dedicated to providing comprehensive and personalized treatment plans tailored to each patient's unique needs.
+            </ContentDiv>
+        </HalfDiv>
+    </FlexDiv>
+  )
+}
+
+export default Book

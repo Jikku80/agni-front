@@ -4,11 +4,12 @@ const Slogan = style.div`
     width : 35%;
     height : fit-content;
     font-size : 50px;
-    position : Absolute;
+    position : Relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, 50%);
     color : #4A5568;
+    z-index: 1;
 `
 
 const TextRight = style.p`
@@ -23,10 +24,10 @@ const TextLeft = style.p`
 const Header = () => {
   return (
     <Slogan>
-      <TextLeft>SMILE</TextLeft>
-      <TextLeft className = "headActive">WITHOUT</TextLeft>
-      <TextRight className = "headActive">COMPLEXES</TextRight>
-      <TextRight>WITH US</TextRight>
+      <TextLeft className="bold custom">BEAUTY</TextLeft>
+      <TextLeft className = "headActive">BECOMES</TextLeft>
+      <TextRight className = "headActive">POWERFUL</TextRight>
+      <TextRight className="bold custom">WITH SMILE</TextRight>
     </Slogan>
   )
 }

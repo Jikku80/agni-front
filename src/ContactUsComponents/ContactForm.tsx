@@ -57,7 +57,8 @@ interface Appointment {
     message : String,
     specialist : String,
     date : String,
-    time : String
+    time : String,
+    branch: String
 }
 const ContactForm = ({setLoading} : Props) => {
     const time = ["10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM"]
@@ -79,6 +80,7 @@ const ContactForm = ({setLoading} : Props) => {
             specialist : data.specialist,
             date : data.date,
             time : data.time,
+            branch: data.branch,
             createdAt : Date.now()
         }, {withCredentials: true})
             .then((response) => {
@@ -143,11 +145,27 @@ const ContactForm = ({setLoading} : Props) => {
                         }
                     </VStack>
                 </HStack>
-                <FormLabel>Message</FormLabel>
-                <Textarea my={4} className="txtArea" placeholder='Enter your problem...' size='sm' w="98%" {...register('message', {required: true})}/>
-                {
-                    errors.message && <ErrorMsg>Please write a message about your problem!</ErrorMsg>
-                }
+                <HStack>
+                    <FormLabel>Message</FormLabel>
+                    <VStack>
+                        <Textarea my={4} className="txtArea" placeholder='Enter your problem...' size='sm' w="98%" {...register('message', {required: true})}/>
+                        {
+                            errors.message && <ErrorMsg>Please write a message about your problem!</ErrorMsg>
+                        } 
+                    </VStack>
+                    <FormLabel>Branch</FormLabel>
+                    <VStack>
+                        <Stack spacing={3} w="100%">
+                            <Select className="lightColot" placeholder='---Select Branch---' {...register('branch', {required: true})}>
+                                <option className="lightColot" value='pulchowk'>Pulchwok</option>
+                                <option className="lightColot" value='kuleshwor'>Kuleshwor</option>
+                            </Select>
+                        </Stack>
+                        {
+                            errors.branch && <ErrorMsg>Please pick a Branch!</ErrorMsg>
+                        }
+                    </VStack>
+                </HStack>
                 <HStack my={4}>
                     <FormLabel>Date</FormLabel>
                     <VStack w="80%">

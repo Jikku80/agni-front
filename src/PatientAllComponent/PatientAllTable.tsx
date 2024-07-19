@@ -16,6 +16,9 @@ interface Props{
         gender: string;
         address: string;
         phone: string;
+        opdno: string;
+        branch: string;
+        uopd : string;
     }[]>>,
     allPatient: {
         _id: string;
@@ -25,6 +28,9 @@ interface Props{
         gender: string;
         address: string;
         phone: string;
+        opdno: string;
+        branch: string;
+        uopd: string;
     }[],
     showComponent : boolean  
 }
@@ -37,12 +43,14 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
     const addressRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const phoneRef = useRef<HTMLInputElement>(null);
+    const opdRef = useRef<HTMLInputElement>(null);
+    const branchRef = useRef<HTMLSelectElement>(null);
 
   return (
     <div>
-        <PatientAllUpdateForm nameRef={nameRef} genderRef={genderRef} emailRef={emailRef} phoneRef={phoneRef} addressRef={addressRef} ageRef={ageRef} setLoading={setLoading} setAllPatient={setAllPatient}/>
+        <PatientAllUpdateForm nameRef={nameRef} genderRef={genderRef} emailRef={emailRef} phoneRef={phoneRef} addressRef={addressRef} ageRef={ageRef} opdRef={opdRef} branchRef={branchRef} setLoading={setLoading} setAllPatient={setAllPatient}/>
         <TableContainer mx={4}>
-            <Table variant='simple'>
+            <Table variant='simple' size="sm">
                 {
                     showComponent == true && <TableCaption>{Object.keys(allPatient).length} Patients</TableCaption>
                 }
@@ -50,11 +58,13 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
                 <Tr>
                     <Th>S.N</Th>
                     <Th>Patient Name</Th>
+                    <Th>OPD No</Th>
                     <Th>Email</Th>
                     <Th>Phone</Th>
                     <Th>Age</Th>
                     <Th>Gender</Th>
                     <Th>Address</Th>
+                    <Th>Branch</Th>
                     <Th>Update</Th>
                     <Th>Delete</Th>
                 </Tr>
@@ -63,8 +73,9 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
                     {showComponent == true && Object.entries(allPatient).map(([key, item], i) => <Tr key = {key + Math.random()}>
                             <Td key={i + 1}>{i + 1}</Td>
                             <Td className="tdLink" key={item.name} onClick={() => {
-                                navigate(`/patient-record/${item.phone}`)
+                                navigate(`/patient-record/${item.uopd}`)
                             }}>{item.name}</Td>
+                            <Td key={item.opdno + i}>{item.opdno}</Td>
                             <Td key={item.email}>
                             {
                             (item.email) &&
@@ -108,6 +119,7 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
                             </>
                         }
                             </Td>
+                            <Td key={item._id + item.opdno}>{(item.branch).toUpperCase()}</Td>
                             <Td>
                                 <Button colorScheme='green' size="sm" onClick={() => {
                                     if (nameRef.current != null) nameRef.current.value = item.name
@@ -116,6 +128,8 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
                                     if (addressRef.current != null) addressRef.current.value = item.address
                                     if (genderRef.current != null) genderRef.current.value = item.gender
                                     if (phoneRef.current != null) phoneRef.current.value = item.phone
+                                    if (opdRef.current != null) opdRef.current.value = item.opdno
+                                    if (branchRef.current != null) branchRef.current.value = item.branch
                                     const patientId = document.querySelector(".patientId");
                                     if (patientId != undefined) patientId.innerHTML = item._id;
                                     const updateForm = document.querySelector(".updateForm");
@@ -145,11 +159,13 @@ const PatientAllTable = ({setLoading, setAllPatient, allPatient, showComponent} 
                 <Tr>
                     <Th>S.N</Th>
                     <Th>Patient Name</Th>
+                    <Th>OPD No</Th>
                     <Th>Email</Th>
                     <Th>Phone</Th>
                     <Th>Age</Th>
                     <Th>Gender</Th>
                     <Th>Address</Th>
+                    <Th>Branch</Th>
                     <Th>Update</Th>
                     <Th>Delete</Th>
                 </Tr>

@@ -65,6 +65,8 @@ interface Patient {
     age : Number,
     address : String,
     gender : String,
+    opdno: String,
+    branch: String,
     totalSession : Number,
     sessionCompleted : Number,
     problem : String,
@@ -98,6 +100,8 @@ const PatientForm = ({setLoading} : Props) => {
             age : data.age,
             address : data.address,
             gender : data.gender,
+            opdno : data.opdno,
+            branch : data.branch,
             totalSession : data.totalSession,
             sessionCompleted : data.sessionCompleted,
             problem : data.problem,
@@ -110,7 +114,7 @@ const PatientForm = ({setLoading} : Props) => {
             successModal?.classList.remove("hidden");
             setTimeout(() => {
                 successModal?.classList.add("hidden");
-                navigate(`/patient-record/${data.phone}`)
+                navigate(`/patient-record/${data.branch}-${data.opdno}`)
             },900)
             setLoading(false);
             
@@ -135,7 +139,7 @@ const PatientForm = ({setLoading} : Props) => {
                     </VStack>
                     <FormLabel>Email</FormLabel>
                     <VStack>
-                        <Input type='email' placeholder='Patient Email' {...register('email', {required: true})} />
+                        <Input type='email' placeholder='Patient Email' {...register('email')} />
                         {
                             logError.includes('Patient with this email') ? <ErrorMsg>Patient already exists with this email!</ErrorMsg> : ""
                         }
@@ -179,6 +183,28 @@ const PatientForm = ({setLoading} : Props) => {
                         </Stack>
                         {
                             errors.gender && <ErrorMsg>Patient Gender is required.</ErrorMsg>
+                        }
+                    </VStack>
+                </HStack>
+                <HStack my={4}>
+                    <FormLabel>OPD No</FormLabel>
+                    <VStack>
+                        <Input type='text' placeholder='Patient opd ' {...register('opdno', {required: true})} />
+                        {
+                            errors.address && <ErrorMsg>Patient opd no is required.</ErrorMsg>
+                        }
+                    </VStack>
+                    <FormLabel>Branch</FormLabel>
+                    <VStack>
+                        <Stack spacing={3}>
+                            <Select placeholder='Select option' {...register('branch', {required: true})}>
+                                <option value='pul'>Pulchowk</option>
+                                <option value='kul'>Kuleshwor</option>
+                                <option value='Other'>Other</option>
+                            </Select>
+                        </Stack>
+                        {
+                            errors.gender && <ErrorMsg>Admitted Branch is required.</ErrorMsg>
                         }
                     </VStack>
                 </HStack>

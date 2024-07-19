@@ -15,6 +15,8 @@ interface Props{
     phoneRef: React.RefObject<HTMLInputElement>,
     addressRef: React.RefObject<HTMLInputElement>,
     ageRef: React.RefObject<HTMLInputElement>,
+    opdRef: React.RefObject<HTMLInputElement>,
+    branchRef: React.RefObject<HTMLSelectElement>,
     setLoading :  React.Dispatch<React.SetStateAction<boolean>>,
     setAllPatient: React.Dispatch<React.SetStateAction<{
         _id: string;
@@ -24,10 +26,13 @@ interface Props{
         gender: string;
         address: string;
         phone: string;
+        opdno: string;
+        branch: string;
+        uopd: string;
     }[]>>
 }
 
-const PatientAllUpdateForm = ({nameRef, genderRef, emailRef, phoneRef, addressRef, ageRef, setLoading, setAllPatient} : Props) => {
+const PatientAllUpdateForm = ({nameRef, genderRef, emailRef, phoneRef, addressRef, ageRef, opdRef, branchRef, setLoading, setAllPatient} : Props) => {
     const[error, setError] = useState('');
   return (
     <div>
@@ -84,6 +89,27 @@ const PatientAllUpdateForm = ({nameRef, genderRef, emailRef, phoneRef, addressRe
                         }
                     </VStack>
                 </HStack>
+                <HStack my={4}>
+                    <FormLabel>OPD No</FormLabel>
+                    <VStack>
+                        <Input type='text' placeholder='OPD No' ref={opdRef} />
+                        {
+                            error == "opdno-error" && <ErrorMsg>OPD no is required.</ErrorMsg>
+                        }
+                    </VStack>
+                    <FormLabel>Branch</FormLabel>
+                    <VStack>
+                        <Stack spacing={3}>
+                            <Select placeholder='Select option' ref={branchRef}>
+                                <option value='pul'>Pulchwok</option>
+                                <option value='kul'>Kuleshwor</option>
+                            </Select>
+                        </Stack>
+                        {
+                            error == "branch-error" && <ErrorMsg>Branch is required.</ErrorMsg>
+                        }
+                    </VStack>
+                </HStack>
                 <p className="patientId hidden"></p>
                 <Button colorScheme='green' my={4} onClick={async() => {
                     setLoading(true);
@@ -94,7 +120,10 @@ const PatientAllUpdateForm = ({nameRef, genderRef, emailRef, phoneRef, addressRe
                         phone : phoneRef.current?.value,
                         age : ageRef.current?.value,
                         address : addressRef.current?.value,
-                        gender : genderRef.current?.value
+                        gender : genderRef.current?.value,
+                        opdno : opdRef.current?.value,
+                        branch : branchRef.current?.value,
+                        uopd : `${branchRef.current?.value}-${opdRef.current?.value}`
                     }, { withCredentials : true})
                     .then((item) => {
                         if (item.status == 200){
@@ -106,6 +135,8 @@ const PatientAllUpdateForm = ({nameRef, genderRef, emailRef, phoneRef, addressRe
                             if (ageRef.current != null) ageRef.current.value = ""
                             if (addressRef.current != null) addressRef.current.value = ""
                             if (genderRef.current != null) genderRef.current.value = ""
+                            if (opdRef.current != null) opdRef.current.value = ""
+                            if (branchRef.current != null) branchRef.current.value = ""
 
                             const updateButton = document.querySelector(".updateForm");
                             updateButton?.classList.add('hidden');
@@ -121,6 +152,8 @@ const PatientAllUpdateForm = ({nameRef, genderRef, emailRef, phoneRef, addressRe
                             if (msg.includes('age')) setError('age-error');
                             if (msg.includes('address')) setError('adress-error');
                             if (msg.includes('gender')) setError('gender-error');
+                            if (msg.includes('opd')) setError('opdno-error');
+                            if (msg.includes('branch')) setError('branch-error')
                         }
                         setLoading(false);
                     })

@@ -31,7 +31,7 @@ const PatientAllComponent = ({setLoading, setEntity} : Props) => {
     const navigate = useNavigate();
     const [showComponent, setShowComponent] = useState(false);
     const [allPatient, setAllPatient] = useState([{
-        _id : '', name: '', email : '', age: 0, gender : '', address : '', phone :''
+        _id : '', name: '', email : '', age: 0, gender : '', address : '', phone :'', opdno: '', branch: '', uopd : ''
     }])
     const [searchVal, setSearchVal] = useState('');
     const [counter, setCounter] = useState(0);

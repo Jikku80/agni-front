@@ -9,6 +9,9 @@ const AllPatients = async(setLoading : (value: SetStateAction<boolean>) => void,
     gender: string;
     address: string;
     age: number;
+    opdno: string;
+    branch: string;
+    uopd: string;
 }[]>) => void, endPoint : string ) => {
     await axios.get(endPoint, {withCredentials: true})
     .then(item => {

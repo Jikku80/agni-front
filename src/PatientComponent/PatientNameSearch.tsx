@@ -22,7 +22,7 @@ const onSubmit: SubmitHandler<Search> = async (searchItem : any) => {
     await axios.get(`${import.meta.env.VITE_NODE_URL}/api/patient/byPhone/${searchItem.phone}`, {withCredentials: true})
     .then(item => {
         const {data} = item;
-        const fetchedData = data.patient.name;
+        const fetchedData = data.patient;
         setSearchVal(searchItem.phone)
         setPatient(fetchedData)
         setShowComponent(true)
@@ -40,7 +40,7 @@ const inputRef = useRef<HTMLButtonElement>(null);
           <InputLeftElement pointerEvents='none'>
           <FaSearch className="searchIcon"/>
           </InputLeftElement>
-          <Input type='number' {...register('phone', {required: true})} placeholder='Search' onKeyDown={(e) => {
+          <Input type='text' {...register('phone', {required: true})} placeholder='Search' onKeyDown={(e) => {
             if (e.key == "Enter") {
               e.preventDefault();
               inputRef.current?.click();
