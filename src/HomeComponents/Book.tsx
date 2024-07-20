@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, HStack, Input, Select, Stack, Textarea, VStack} from "@chakra-ui/react"
+import { Button, FormControl, FormLabel, HStack, Select, Stack, VStack} from "@chakra-ui/react"
 import {useForm, SubmitHandler} from "react-hook-form";
 import { SiTicktick } from "react-icons/si";
 import axios from 'axios';
@@ -17,9 +17,9 @@ const FlexDiv = style.div`
 
 const FormDiv = style.div`
     background-color : #3182ce;
-    width : 60%;
     padding : 4%;
     border-radius : .5rem;
+    z-index : 1;
 `
 
 const HalfDiv = style.div`
@@ -124,7 +124,7 @@ const Book = ({setLoading} : Props) => {
 
     const [availableTime, setAvailableTime] = useState({time});
     const [updateTime, setUpdateTime] = useState(false);
-    const [newPlaceholder, setNewPlaceholder] = useState('---Select A Date First---');
+    const [newPlaceholder, setNewPlaceholder] = useState('---Select Date First---');
 
     const onSubmit: SubmitHandler<Appointment> = async (data : any) => {
         setLoading(true)
@@ -158,38 +158,38 @@ const Book = ({setLoading} : Props) => {
             })
     }
   return (
-    <FlexDiv>
-        <BraceImage src={brace}/>
-        <GapImage src={gap}/>
+    <FlexDiv className="flexDiv">
         <FormDiv>
+            <BraceImage className="book-braces" src={brace}/>
+            <GapImage className="book-gap" src={gap}/>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <FormControl className="bookForm" m={4}>
-                    <HStack my={4} justifyContent="space-between">
-                        <FormLabel className="white sizedlabel">Name</FormLabel>
-                        <VStack w="80%">
-                            <Input className="white sizedbox" type='text' placeholder='Enter your name' w="90%" {...register('name', {required: true})}/>
+                    <HStack className="rm-hstack" my={2}>
+                        <VStack w="80%" alignItems="left">
+                            <FormLabel className="white sizedlabel">Name</FormLabel>
+                            <input className="white sizedbox" type='text' {...register('name', {required: true})}/>
                             {
                                 errors.name && <ErrorMsg>Please provide your name!</ErrorMsg>
                             }
                         </VStack>
-                        <FormLabel className="white sizedlabel">Email</FormLabel>
-                        <VStack w="80%">    
-                            <Input className="white sizedbox" type='email' placeholder='Enter your email' w="90%" {...register('email', {required: true})}/>
+                        <VStack w="80%"alignItems="left">    
+                            <FormLabel className="white sizedlabel">Email</FormLabel>
+                            <input className="white sizedbox" type='email' {...register('email', {required: true})}/>
                             {
                                 errors.email && <ErrorMsg>Please provide your email address!</ErrorMsg>
                             }
                         </VStack>
-                    </HStack>
-                    <HStack my={4}>
-                        <FormLabel className="white sizedlabel">Phone</FormLabel>
-                        <VStack w="80%">
-                            <Input className="white sizedbox" type='number' placeholder='Enter phone number' w="90%" {...register('phone', {required: true})}/>
+                    </HStack >
+                    <HStack my={2} className="rm-hstack">
+                        <VStack w="80%" alignItems="left">
+                            <FormLabel className="white sizedlabel">Phone</FormLabel>
+                            <input className="white sizedbox" type='number' {...register('phone', {required: true})}/>
                             {
                                 errors.phone && <ErrorMsg>Please provide your phone number!</ErrorMsg>
                             }
                         </VStack>
-                        <FormLabel className="white sizedlabel">Specialist</FormLabel>
-                        <VStack w="80%">
+                        <VStack w="80%" alignItems="left">
+                            <FormLabel className="white sizedlabel">Specialist</FormLabel>
                             <Stack spacing={3} w="90%">
                                 <Select className="white sizedbox" placeholder='---Select Doctor---' {...register('specialist', {required: true})}>
                                     <option className="lightColot" value='Dr. James Maharjan'>Dr. James Maharjan</option>
@@ -203,18 +203,18 @@ const Book = ({setLoading} : Props) => {
                             }
                         </VStack>
                     </HStack>
-                    <HStack>
-                        <FormLabel className="white sizedlabel">Message</FormLabel>
-                        <VStack>
-                            <Textarea my={4} className="txtArea white sizedbox" placeholder='Enter your problem...' size='sm' w="98%" {...register('message', {required: true})}/>
+                    <HStack className="rm-hstack rm-flex msgbrnch" justifyContent='space-between' alignItems='center'>
+                        <VStack alignItems="left">
+                            <FormLabel className="white sizedlabel">Message</FormLabel>
+                            <textarea className="txtArea white sizedbox" {...register('message', {required: true})}/>
                             {
                                 errors.message && <ErrorMsg>Please write a message about your problem!</ErrorMsg>
                             } 
                         </VStack>
-                        <FormLabel className="white sizedlabel">Branch</FormLabel>
-                        <VStack>
-                            <Stack spacing={3} w="100%">
-                                <Select className="white sizedbox" placeholder='---Select Branch---' {...register('branch', {required: true})}>
+                        <VStack alignItems="left" className="branchstack">
+                            <FormLabel className="white sizedlabel">Branch</FormLabel>
+                            <Stack mr={8}>
+                                <Select overflow={"hidden"} className="white sizedbox" placeholder='---Select Branch---' {...register('branch', {required: true})}>
                                     <option className="lightColot" value='pulchowk'>Pulchwok</option>
                                     <option className="lightColot" value='kuleshwor'>Kuleshwor</option>
                                 </Select>
@@ -224,10 +224,10 @@ const Book = ({setLoading} : Props) => {
                             }
                         </VStack>
                     </HStack>
-                    <HStack my={4}>
-                        <FormLabel className="white sizedlabel">Date</FormLabel>
-                        <VStack w="80%">
-                            <Input className="white sizedbox" type='date' w="90%" {...register('date', {required: true})} onChange={async(e) => {
+                    <HStack className="rm-hstack" my={2}>
+                        <VStack w="80%" alignItems="left">
+                            <FormLabel className="white sizedlabel">Date</FormLabel>
+                            <input className="white sizedbox" type='date' {...register('date', {required: true})} onChange={async(e) => {
                                 setLoading(true);
                                 await axios.get(`${import.meta.env.VITE_NODE_URL}/api/appointment/getAllTime/${e.target.value}`, { withCredentials: false })
                                     .then((item:any) => {
@@ -250,8 +250,8 @@ const Book = ({setLoading} : Props) => {
                                 errors.date && <ErrorMsg>Please pick a Date!</ErrorMsg>
                             }
                         </VStack>
-                        <FormLabel className="white sizedlabel">Time</FormLabel>
-                        <VStack w="80%">
+                        <VStack w="80%" alignItems="left">
+                            <FormLabel className="white sizedlabel">Time</FormLabel>
                             <Stack spacing={3} w="90%">
                                 <Select className="white timeAvailable sizedbox" placeholder={newPlaceholder} {...register('time', {required: true})}>
                                     {
@@ -278,7 +278,7 @@ const Book = ({setLoading} : Props) => {
                 </ModalBody>
             </Modal>
         </FormDiv>
-        <HalfDiv>
+        <HalfDiv className="halfDiv">
             <Head>Make an<Blue>Appointment</Blue></Head>
             <ContentDiv>
                 Making an appointment with Agni Dental is a smart choice for anyone seeking top-notch dental care. With a team of highly skilled and experienced dental professionals, Agni Dental is dedicated to providing comprehensive and personalized treatment plans tailored to each patient's unique needs.

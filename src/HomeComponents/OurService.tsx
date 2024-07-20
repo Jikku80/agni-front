@@ -61,10 +61,11 @@ const CardHead = style.h1`
     font-weight : bolder;
 `
 
-const CardP = style.p`
+const CardP = style.div`
     display : flex;
     align-items : center;
     justify-content : flex-end;
+    font-family : Montserrat;
     
     &:hover{
         cursor : pointer;
@@ -128,20 +129,20 @@ const OurService = () => {
     ]
   return (
     <FlexDiv>
-        <GapImage src={gap}/>
-        <FillImage src={fill}/>
-        <Head>Our <Blue>Services</Blue></Head>
+        <GapImage className="serv-gap" src={gap}/>
+        <FillImage className="serv-fill" src={fill}/>
+        <Head>Our <Blue className='Mr'>Services</Blue></Head>
         <p>We provide a wise range of high quality dental services.</p>
-        <SevDiv>
+        <SevDiv className="flexDiv">
             {
-                data.map(data => <CardDiv>
-                    <CardImage src={data.image} />
+                data.map(data => <CardDiv className="serv-carddiv" key={data.name + data.image}>
+                    <CardImage className="serv-img" key={data.image} src={data.image} />
                     <Card>
-                        <CardHead><Blue>{data.name}</Blue></CardHead>
-                        <p className="smpx">{(data.detail).substring(0, 120)}</p>
+                        <CardHead key={data.name}><Blue>{data.name}</Blue></CardHead>
+                        <p className="smpx" key={(data.detail).substring(0,20)}>{(data.detail).substring(0, 125)}...</p>
                         <Blue>
                             <CardP className='smpx'>
-                                <CardPIn>More Details </CardPIn>
+                                <CardPIn key={data.image + data.name}>More Details </CardPIn>
                                 <FaArrowRight/>
                             </CardP>
                         </Blue>

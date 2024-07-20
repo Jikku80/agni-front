@@ -14,16 +14,16 @@ const Slogan = style.div`
 
 const TextRight = style.p`
     text-align: right;
-    line-height: 0.80;
+    line-height: 1.1;
 `
 
 const TextLeft = style.p`
-  line-height: 0.80;
+  line-height: 1.1;
 `
 
 const Header = () => {
   return (
-    <Slogan>
+    <Slogan className='slogan'>
       <TextLeft className="bold custom">BEAUTY</TextLeft>
       <TextLeft className = "headActive">BECOMES</TextLeft>
       <TextRight className = "headActive">POWERFUL</TextRight>

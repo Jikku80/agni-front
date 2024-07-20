@@ -5,6 +5,7 @@ import Welcome from "./Welcome"
 import Premier from "./Premier"
 import Book from "./Book";
 import OurService from "./OurService"
+import './home.css'
 
 interface Props {
   setLoading: React.Dispatch<React.SetStateAction<boolean>>

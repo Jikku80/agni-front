@@ -1,12 +1,11 @@
 *{
-    /* font-family: Greycliff, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    font-family: Montserrat;
+    font-family: "Wix Madefor Display" sans-serif;
     letter-spacing: .5px !important;
     scrollbar-width: thin !important;
 }
 
 Th{
-    font-family: Greycliff-Medium !important;
+    font-family: "Wix Madefor Display" !important;
     letter-spacing: 1.5px !important;
 }
 
@@ -152,7 +151,7 @@ Th{
     height: 40vh;
     width: 100vw;
     position: absolute !important;
-    top: 50vh !important;
+    top: 50vh;
     left: 0;
 }
 
@@ -165,10 +164,24 @@ Th{
 }
 
 .sizedbox{
-    width: 12vw !important;
-    border-radius: .5rem !important;
+    width: 15vw;
+    border-radius: 5px !important;
+    padding: 4%;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.sizedbox::selection{
+    border-color: white !important;
 }
 
 .sizedlabel{
-    width: 17vw !important;
+    text-align: left !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+.Mr{
+    margin-left : 8px;
 }

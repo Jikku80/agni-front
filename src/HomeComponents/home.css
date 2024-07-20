@@ -1,0 +1,118 @@
+@media screen and (max-width: 992px) {
+    .slogan{
+        font-size: 20px !important;
+    }
+
+    .covimg{
+        top : 20vh !important;
+    }
+
+    .welcomeDiv{
+        flex-direction: column !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        align-items: justify;
+    }
+
+    .flexDiv{
+        flex-direction: column !important;
+    }
+
+    .para, .cardDiv{
+        width: 80% !important;
+    }
+
+    .cardImage{
+        width: 20vw !important;
+    }
+
+    .welcome-tooth{
+        top: 60vh !important;
+    }
+
+    .welcome-brace{
+        top : 70vh !important;
+    }
+
+    .welcome-fill{
+        top : 110vh !important;
+    }
+
+    .welcome-gap{
+        top: 160vh !important;
+    }
+
+    .pre-card{
+        height: fit-content !important;
+        margin: 4% !important;
+    }
+
+    .pre-image{
+        width: 100% !important;
+        height: 50vh !important;
+    }
+
+    .pre-gap{
+        top: 195vh !important;
+        right: 0vw  !important;
+
+    }
+
+    .pre-fill{
+        top : 230vh !important;
+        left: 1vw !important;
+    }
+
+    .rm-hstack{
+        flex-direction: column !important;
+    }
+
+    .rm-flex{
+        display: flex;
+        align-items: left !important;
+        justify-content: left !important;
+    }
+
+    .sizedbox{
+        width: 60vw !important;
+    }
+
+    .msgbrnch{
+        display: inline-block;
+    }
+
+    .branchstack{
+        margin-left: 10%;
+    }
+
+    .book-braces{
+        top: 450vh !important;
+    }
+
+    .book-gap{
+        top: 600vh !important;
+    }
+
+    .halfDiv{
+        padding: 0 !important;
+    }
+
+    .serv-img{
+        width: 8vh !important;
+        height: 8vh !important;
+    }
+
+    .serv-carddiv{
+        width: 80vw !important;
+    }
+
+    .serv-gap{
+        top : 700vh !important;
+        right: 1vw !important;
+    }
+
+    .serv-fill{
+        top: 750vh !important;
+        left: 1vw !important;
+    }
+}

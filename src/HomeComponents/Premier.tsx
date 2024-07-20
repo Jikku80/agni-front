@@ -104,10 +104,10 @@ const Premier = () => {
   return (
     <>
         <EmptyDiv></EmptyDiv>    
-        <GapImage src={gap}/>
-        <FillImage src={fill}/>
+        <GapImage className="pre-gap" src={gap}/>
+        <FillImage className="pre-fill" src={fill}/>
         <FlexDiv>
-            <HeadFlex>
+            <HeadFlex className='flexDiv'>
                 <Head><Blue>Premier</Blue>Dental Services</Head>
                 <HeadP onClick={() => navigate('/services')}>
                     <RightMargin>View All Services</RightMargin>
@@ -115,21 +115,21 @@ const Premier = () => {
                 </HeadP>
             </HeadFlex>
             <p>Get the best care with our top dental services, designed for all your oral health needs.</p>
-            <CardDiv>
-                <Card>
-                    <CardImage src={braces} />
+            <CardDiv className='flexDiv'>
+                <Card className='pre-card'>
+                    <CardImage className="pre-image" src={braces} />
                     <Caption>Braces</Caption>
                 </Card>
-                <Card>
-                    <CardImage src={implant} />
+                <Card className='pre-card'>
+                    <CardImage className="pre-image" src={implant} />
                     <Caption>Dental Implants</Caption>
                 </Card>
-                <Card>
-                    <CardImage src={rootcanal} />
+                <Card className='pre-card'>
+                    <CardImage className="pre-image" src={rootcanal} />
                     <Caption>Root Canal</Caption>
                 </Card>
-                <Card>
-                    <CardImage src={white} />
+                <Card className='pre-card'>
+                    <CardImage className="pre-image" src={white} />
                     <Caption>Teeth Whitening</Caption>
                 </Card>
             </CardDiv>

@@ -99,30 +99,30 @@ const Welcome = () => {
   return (
     <>
         <EmptyDiv></EmptyDiv>
-        <ToothImage src={img}/>
-        <BraceImage src={brace}/>
-        <FillImage src={fill}/>
-        <GapImage src={gap}/>
-        <FlexDiv>
-            <Para>
+        <ToothImage className="welcome-tooth" src={img}/>
+        <BraceImage className="welcome-brace" src={brace}/>
+        <FillImage className="welcome-fill" src={fill}/>
+        <GapImage className="welcome-gap" src={gap}/>
+        <FlexDiv className='welcomeDiv'>
+            <Para className='para'>
                 <Head>Welcome to <Blue> Agni Dental</Blue></Head>
                 <p>Our clinic offers a comprehensive range of dental treatments performed by well-trained and certified doctors, ensuring top-quality care at affordable prices. Whether you need routine check-ups, cosmetic procedures, or advanced dental surgeries, our team is dedicated to providing personalized and professional services to meet all your oral health needs.</p>
             </Para>
-            <CardDiv>
-                <Card className="bottomCard">
+            <CardDiv className='cardDiv'>
+                <Card className="bottomCard welcomCard">
                     <CardTitle>10</CardTitle>
                     <p>member <br></br> team</p>
-                    <BottomImage src={firstImg} />
+                    <BottomImage className="cardImage" src={firstImg} />
                 </Card>
-                <Card>
+                <Card className="welcomCard">
                     <CardTitle>+100</CardTitle>
                     <p>Happy <br></br> Customer</p>
-                    <TopImage src={secImg} />
+                    <TopImage className="cardImage" src={secImg} />
                 </Card>
-                <Card className="bottomCard">
+                <Card className="bottomCard welcomCard">
                     <CardTitle>2</CardTitle>
                     <p>years <br></br> experience</p>
-                    <BottomImage src={thirdImg} />
+                    <BottomImage className="cardImage" src={thirdImg} />
                 </Card>
             </CardDiv>
         </FlexDiv>
