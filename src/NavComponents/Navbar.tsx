@@ -1,7 +1,6 @@
 
 import { HStack } from '@chakra-ui/react'
 import style from 'styled-components'
-import { Image } from '@chakra-ui/react'
 import logo from '../../public/logo.png';
 import { FaArrowRight } from "react-icons/fa6";
 import { useRef, useState } from 'react';
