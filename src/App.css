@@ -185,3 +185,17 @@ Th{
 .Mr{
     margin-left : 8px;
 }
+
+@media screen and (max-width: 992px) {
+    .rowDiv{
+        margin-top: 4vh;
+    }
+
+    .loginDiv{
+        width: 80vw !important;
+        height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

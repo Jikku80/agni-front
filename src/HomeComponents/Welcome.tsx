@@ -6,6 +6,7 @@ import img from '../../public/img1.png';
 import brace from '../../public/brace.png';
 import gap from '../../public/gap.png';
 import fill from '../../public/filling.png';
+import { useRef } from 'react';
 
 
 const EmptyDiv = style.div`
@@ -96,6 +97,19 @@ const Blue = style.span`
 `
 
 const Welcome = () => {
+    const ref = useRef<HTMLDivElement>(null);
+
+    let i = 0;
+    window.addEventListener("scrollend", () => {
+        if (scrollY > 300 && scrollY < 580){
+            setInterval(() => {
+                if (i !== 101){
+                    if (ref.current != null) ref.current.innerHTML = `+${i++}`
+                }
+                return;
+            },100)
+        }
+    })
   return (
     <>
         <EmptyDiv></EmptyDiv>
@@ -105,7 +119,7 @@ const Welcome = () => {
         <GapImage className="welcome-gap" src={gap}/>
         <FlexDiv className='welcomeDiv'>
             <Para className='para'>
-                <Head>Welcome to <Blue> Agni Dental</Blue></Head>
+                <Head className="alignLeft">Welcome to <Blue> Agni Dental</Blue></Head>
                 <p>Our clinic offers a comprehensive range of dental treatments performed by well-trained and certified doctors, ensuring top-quality care at affordable prices. Whether you need routine check-ups, cosmetic procedures, or advanced dental surgeries, our team is dedicated to providing personalized and professional services to meet all your oral health needs.</p>
             </Para>
             <CardDiv className='cardDiv'>
@@ -115,13 +129,13 @@ const Welcome = () => {
                     <BottomImage className="cardImage" src={firstImg} />
                 </Card>
                 <Card className="welcomCard">
-                    <CardTitle>+100</CardTitle>
-                    <p>Happy <br></br> Customer</p>
+                    <CardTitle ref={ref}>+100</CardTitle>
+                    <p>Happy <br></br> Patients</p>
                     <TopImage className="cardImage" src={secImg} />
                 </Card>
                 <Card className="bottomCard welcomCard">
                     <CardTitle>2</CardTitle>
-                    <p>years <br></br> experience</p>
+                    <p>Years <br></br> Experience</p>
                     <BottomImage className="cardImage" src={thirdImg} />
                 </Card>
             </CardDiv>

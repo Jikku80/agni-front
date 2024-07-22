@@ -1,4 +1,41 @@
+.teethicon{
+    font-size: 100px;
+}
+
+.usericon{
+    font-size: 150px;
+    border: 20px solid white;
+    position: absolute;
+    border-radius: 8rem;
+    bottom : .2vh;
+    color : #1777B2;
+}
+
+.leftIcon, .rightIcon{
+    font-size: 100px;
+    color: gray;
+    cursor: pointer;
+}
+
+.leftIcon:hover, .rightIcon:hover{
+    color : #1777B2;
+}
+
+.circleIcon{
+    margin: 6px;
+}
+
+.activeIcon{
+    color : #1777B2;
+}
+
+
 @media screen and (max-width: 992px) {
+    .alignLeft{
+        text-align: left !important;
+        font-size: 25px !important;
+    }
+
     .slogan{
         font-size: 20px !important;
     }
@@ -114,5 +151,34 @@
     .serv-fill{
         top: 750vh !important;
         left: 1vw !important;
+    }
+
+    .reviewCard{
+        width: 70vw !important;
+        height: 50vh !important;
+    }
+    
+    .reviewDetail{
+        font-size: 11px !important;
+        margin-bottom: 15vh !important;
+    }
+
+    .usericon{
+        font-size: 50px;
+        bottom: 8vh;
+        border: 10px solid white;
+    }
+
+    .leftIcon, .rightIcon{
+        font-size: 50px !important;
+        z-index: 2 !important;
+    }
+
+    .rightIcon{
+        margin-left: 10px;
+    }
+
+    .circleIcon{
+        font-size: 10px;
     }
 }

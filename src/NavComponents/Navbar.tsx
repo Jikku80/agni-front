@@ -37,7 +37,7 @@ const BookButton = style.button`
 `
 
 const Navbar = () => {
-  const navValues = ['HOME', 'SERVICES', 'SPECIALIST', 'LOGIN', 'CONTACT US']
+  const navValues = ['Home', 'Services', 'Meet your Doctor', 'Employee Login', 'Contact']
 
   const [isActive, setIsActive] = useState(-1);
 
@@ -71,31 +71,31 @@ const Navbar = () => {
         <HStack className='hstack' w="50%" justifyContent="space-around">
           {navValues.map((item, index) => <Anchor key={item} className={isActive == index ? "acitveColor" : ""} onClick={() => {
             setIsActive(index)
-            if (item == "HOME") {
+            if (item == "Home") {
               navigate('/')
               if (window.innerWidth < 992){
                 if (ref.current != null) ref.current.style.display = "none";
               }
             }
-            if (item == "SERVICES") {
+            if (item == "Services") {
               navigate('/services')
               if (window.innerWidth < 992){
                 if (ref.current != null) ref.current.style.display = "none";
               }
             }
-            if (item == "SPECIALIST") {
+            if (item == "Meet your Doctor") {
               navigate('/specialist')
               if (window.innerWidth < 992){
                 if (ref.current != null) ref.current.style.display = "none";
               }
             }
-            if (item == "LOGIN") {
+            if (item == "Employee Login") {
               navigate('/login')
               if (window.innerWidth < 992){
                 if (ref.current != null) ref.current.style.display = "none";
               }
             }
-            if (item == "CONTACT US") {
+            if (item == "Contact") {
               navigate('/contact-us')
               if (window.innerWidth < 992){
                 if (ref.current != null) ref.current.style.display = "none";

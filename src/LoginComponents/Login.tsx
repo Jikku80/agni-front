@@ -75,7 +75,7 @@ const Login = ({isEntity, setEntity, setLoading} : Props) => {
     <FlexDiv>
         {
             isEntity == "" || isEntity == undefined  || document.cookie == "jwt==loggedout" || document.cookie == "" ?
-            <LoginDiv>    
+            <LoginDiv className="loginDiv">    
                 <LoginHead>LOGIN</LoginHead>
                 <form onSubmit={handleSubmit(onSubmit)}>                
                     <FormControl>

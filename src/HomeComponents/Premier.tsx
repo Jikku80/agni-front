@@ -108,7 +108,7 @@ const Premier = () => {
         <FillImage className="pre-fill" src={fill}/>
         <FlexDiv>
             <HeadFlex className='flexDiv'>
-                <Head><Blue>Premier</Blue>Dental Services</Head>
+                <Head className="alignLeft"><Blue>Premier</Blue>Dental Services</Head>
                 <HeadP onClick={() => navigate('/services')}>
                     <RightMargin>View All Services</RightMargin>
                     <FaArrowRight/>

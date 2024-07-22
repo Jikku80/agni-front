@@ -73,7 +73,7 @@ const CardP = style.div`
 `
 
 const CardPIn = style.p`
-    margin-right : 8px;
+    margin-right : 12px;
 `
 
 const GapImage = style.img`
@@ -131,7 +131,7 @@ const OurService = () => {
     <FlexDiv>
         <GapImage className="serv-gap" src={gap}/>
         <FillImage className="serv-fill" src={fill}/>
-        <Head>Our <Blue className='Mr'>Services</Blue></Head>
+        <Head className="alignLeft">Our <Blue className='Mr'>Services</Blue></Head>
         <p>We provide a wise range of high quality dental services.</p>
         <SevDiv className="flexDiv">
             {

@@ -7,16 +7,20 @@ import style from 'styled-components';
 import io from 'socket.io-client'
 import brace from '../../public/brace.png';
 import gap from '../../public/gap.png';
+import chair from '../../public/chair.png';
 
 const FlexDiv = style.div`
     margin-top: 10vh;
     margin-left: 10vw;
     margin-right: 10vw;
+`
+
+const InnerDiv = style.div`
     display : flex;
 `
 
 const FormDiv = style.div`
-    background-color : #3182ce;
+    background-image: linear-gradient(to bottom,#1777B2, #4DAFEB);
     padding : 4%;
     border-radius : .5rem;
     z-index : 1;
@@ -28,13 +32,6 @@ const HalfDiv = style.div`
     align-items : center;
     justify-content : center;
     padding-left : 2%;
-`
-
-const ContentDiv= style.div`
-    background-color : #80808073;
-    padding : 4%;
-    border-radius : .5rem;
-    text-align : justify;
 `
 
 const Modal = style.div`
@@ -159,131 +156,131 @@ const Book = ({setLoading} : Props) => {
     }
   return (
     <FlexDiv className="flexDiv">
-        <FormDiv>
-            <BraceImage className="book-braces" src={brace}/>
-            <GapImage className="book-gap" src={gap}/>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <FormControl className="bookForm" m={4}>
-                    <HStack className="rm-hstack" my={2}>
-                        <VStack w="80%" alignItems="left">
-                            <FormLabel className="white sizedlabel">Name</FormLabel>
-                            <input className="white sizedbox" type='text' {...register('name', {required: true})}/>
-                            {
-                                errors.name && <ErrorMsg>Please provide your name!</ErrorMsg>
-                            }
-                        </VStack>
-                        <VStack w="80%"alignItems="left">    
-                            <FormLabel className="white sizedlabel">Email</FormLabel>
-                            <input className="white sizedbox" type='email' {...register('email', {required: true})}/>
-                            {
-                                errors.email && <ErrorMsg>Please provide your email address!</ErrorMsg>
-                            }
-                        </VStack>
-                    </HStack >
-                    <HStack my={2} className="rm-hstack">
-                        <VStack w="80%" alignItems="left">
-                            <FormLabel className="white sizedlabel">Phone</FormLabel>
-                            <input className="white sizedbox" type='number' {...register('phone', {required: true})}/>
-                            {
-                                errors.phone && <ErrorMsg>Please provide your phone number!</ErrorMsg>
-                            }
-                        </VStack>
-                        <VStack w="80%" alignItems="left">
-                            <FormLabel className="white sizedlabel">Specialist</FormLabel>
-                            <Stack spacing={3} w="90%">
-                                <Select className="white sizedbox" placeholder='---Select Doctor---' {...register('specialist', {required: true})}>
-                                    <option className="lightColot" value='Dr. James Maharjan'>Dr. James Maharjan</option>
-                                    <option className="lightColot" value='Dr. Aaishma Shrestha'>Dr. Aaishma Shrestha</option>
-                                    <option className="lightColot" value='Dr. Udikshya Maharjan'>Dr. Udikshya Maharjan</option>
-                                    <option className="lightColot" value='new'>New In Agni</option>
-                                </Select>
-                            </Stack>
-                            {
-                                errors.specialist && <ErrorMsg>Please pick a Doctor!</ErrorMsg>
-                            }
-                        </VStack>
-                    </HStack>
-                    <HStack className="rm-hstack rm-flex msgbrnch" justifyContent='space-between' alignItems='center'>
-                        <VStack alignItems="left">
-                            <FormLabel className="white sizedlabel">Message</FormLabel>
-                            <textarea className="txtArea white sizedbox" {...register('message', {required: true})}/>
-                            {
-                                errors.message && <ErrorMsg>Please write a message about your problem!</ErrorMsg>
-                            } 
-                        </VStack>
-                        <VStack alignItems="left" className="branchstack">
-                            <FormLabel className="white sizedlabel">Branch</FormLabel>
-                            <Stack mr={8}>
-                                <Select overflow={"hidden"} className="white sizedbox" placeholder='---Select Branch---' {...register('branch', {required: true})}>
-                                    <option className="lightColot" value='pulchowk'>Pulchwok</option>
-                                    <option className="lightColot" value='kuleshwor'>Kuleshwor</option>
-                                </Select>
-                            </Stack>
-                            {
-                                errors.branch && <ErrorMsg>Please pick a Branch!</ErrorMsg>
-                            }
-                        </VStack>
-                    </HStack>
-                    <HStack className="rm-hstack" my={2}>
-                        <VStack w="80%" alignItems="left">
-                            <FormLabel className="white sizedlabel">Date</FormLabel>
-                            <input className="white sizedbox" type='date' {...register('date', {required: true})} onChange={async(e) => {
-                                setLoading(true);
-                                await axios.get(`${import.meta.env.VITE_NODE_URL}/api/appointment/getAllTime/${e.target.value}`, { withCredentials: false })
-                                    .then((item:any) => {
-                                    const {data} = item;
-                                    const fetchedTime = data.time;
-                                    fetchedTime.filter((item:any) => {
-                                        time.splice(time.indexOf(item), 1);
-                                    })
-                                    
-                                    setAvailableTime({time})
-                                    setUpdateTime(true)
-                                    setNewPlaceholder('---Available Times---')
-                                    setLoading(false);
-                                    }).catch(Error => {
-                                    setLoading(false);
-                                    console.log('Error', Error)
-                                    })
-                            }}/>
-                            {
-                                errors.date && <ErrorMsg>Please pick a Date!</ErrorMsg>
-                            }
-                        </VStack>
-                        <VStack w="80%" alignItems="left">
-                            <FormLabel className="white sizedlabel">Time</FormLabel>
-                            <Stack spacing={3} w="90%">
-                                <Select className="white timeAvailable sizedbox" placeholder={newPlaceholder} {...register('time', {required: true})}>
-                                    {
-                                        updateTime && Object.entries(availableTime).map(([key, el], i) => el.map (item => <option key={key + i} className="lightColot" value={item}>{item}</option>))
-                                    }
-                                </Select>
-                            </Stack>
-                            {
-                                errors.time && <ErrorMsg>Please pick a time!</ErrorMsg>
-                            }
-                        </VStack>
-                    </HStack>
-                    <Button type="submit" my={2}>Book</Button>
-                </FormControl>
-            </form>
-            <Modal className = "successModal hidden">
-                <ModalBody>
-                    <p>Your booking has been requested, Please keep an eye on your mail for confirmation.</p>
-                    <SiTicktick className="tick" />
-                    <ModalButton onClick={() => {
-                        let successModal = document.querySelector(".successModal");
-                        successModal?.classList.add("hidden");
-                    }}>Close</ModalButton>
-                </ModalBody>
-            </Modal>
-        </FormDiv>
-        <HalfDiv className="halfDiv">
-            <Head>Make an<Blue>Appointment</Blue></Head>
-            <ContentDiv>
-                Making an appointment with Agni Dental is a smart choice for anyone seeking top-notch dental care. With a team of highly skilled and experienced dental professionals, Agni Dental is dedicated to providing comprehensive and personalized treatment plans tailored to each patient's unique needs.
-            </ContentDiv>
-        </HalfDiv>
+        <Head className="alignLeft">Make an<Blue>Appointment</Blue></Head>
+        <InnerDiv className="flexDiv">
+            <FormDiv>
+                <BraceImage className="book-braces" src={brace}/>
+                <GapImage className="book-gap" src={gap}/>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <FormControl className="bookForm" m={4}>
+                        <HStack className="rm-hstack" my={2}>
+                            <VStack w="80%" alignItems="left">
+                                <FormLabel className="white sizedlabel">Name</FormLabel>
+                                <input className="white sizedbox" type='text' {...register('name', {required: true})}/>
+                                {
+                                    errors.name && <ErrorMsg>Please provide your name!</ErrorMsg>
+                                }
+                            </VStack>
+                            <VStack w="80%"alignItems="left">    
+                                <FormLabel className="white sizedlabel">Email</FormLabel>
+                                <input className="white sizedbox" type='email' {...register('email', {required: true})}/>
+                                {
+                                    errors.email && <ErrorMsg>Please provide your email address!</ErrorMsg>
+                                }
+                            </VStack>
+                        </HStack >
+                        <HStack my={2} className="rm-hstack">
+                            <VStack w="80%" alignItems="left">
+                                <FormLabel className="white sizedlabel">Phone</FormLabel>
+                                <input className="white sizedbox" type='number' {...register('phone', {required: true})}/>
+                                {
+                                    errors.phone && <ErrorMsg>Please provide your phone number!</ErrorMsg>
+                                }
+                            </VStack>
+                            <VStack w="80%" alignItems="left">
+                                <FormLabel className="white sizedlabel">Specialist</FormLabel>
+                                <Stack spacing={3} w="90%">
+                                    <Select className="white sizedbox" placeholder='---Select Doctor---' {...register('specialist', {required: true})}>
+                                        <option className="lightColot" value='Dr. James Maharjan'>Dr. James Maharjan</option>
+                                        <option className="lightColot" value='Dr. Aaishma Shrestha'>Dr. Aaishma Shrestha</option>
+                                        <option className="lightColot" value='Dr. Udikshya Maharjan'>Dr. Udikshya Maharjan</option>
+                                        <option className="lightColot" value='new'>New In Agni</option>
+                                    </Select>
+                                </Stack>
+                                {
+                                    errors.specialist && <ErrorMsg>Please pick a Doctor!</ErrorMsg>
+                                }
+                            </VStack>
+                        </HStack>
+                        <HStack className="rm-hstack rm-flex msgbrnch" justifyContent='space-between' alignItems='center'>
+                            <VStack alignItems="left">
+                                <FormLabel className="white sizedlabel">Message</FormLabel>
+                                <textarea className="txtArea white sizedbox" {...register('message', {required: true})}/>
+                                {
+                                    errors.message && <ErrorMsg>Please write a message about your problem!</ErrorMsg>
+                                } 
+                            </VStack>
+                            <VStack alignItems="left" className="branchstack">
+                                <FormLabel className="white sizedlabel">Branch</FormLabel>
+                                <Stack mr={8}>
+                                    <Select overflow={"hidden"} className="white sizedbox" placeholder='---Select Branch---' {...register('branch', {required: true})}>
+                                        <option className="lightColot" value='pulchowk'>Pulchwok</option>
+                                        <option className="lightColot" value='kuleshwor'>Kuleshwor</option>
+                                    </Select>
+                                </Stack>
+                                {
+                                    errors.branch && <ErrorMsg>Please pick a Branch!</ErrorMsg>
+                                }
+                            </VStack>
+                        </HStack>
+                        <HStack className="rm-hstack" my={2}>
+                            <VStack w="80%" alignItems="left">
+                                <FormLabel className="white sizedlabel">Date</FormLabel>
+                                <input className="white sizedbox" type='date' {...register('date', {required: true})} onChange={async(e) => {
+                                    setLoading(true);
+                                    await axios.get(`${import.meta.env.VITE_NODE_URL}/api/appointment/getAllTime/${e.target.value}`, { withCredentials: false })
+                                        .then((item:any) => {
+                                        const {data} = item;
+                                        const fetchedTime = data.time;
+                                        fetchedTime.filter((item:any) => {
+                                            time.splice(time.indexOf(item), 1);
+                                        })
+                                        
+                                        setAvailableTime({time})
+                                        setUpdateTime(true)
+                                        setNewPlaceholder('---Available Times---')
+                                        setLoading(false);
+                                        }).catch(Error => {
+                                        setLoading(false);
+                                        console.log('Error', Error)
+                                        })
+                                }}/>
+                                {
+                                    errors.date && <ErrorMsg>Please pick a Date!</ErrorMsg>
+                                }
+                            </VStack>
+                            <VStack w="80%" alignItems="left">
+                                <FormLabel className="white sizedlabel">Time</FormLabel>
+                                <Stack spacing={3} w="90%">
+                                    <Select className="white timeAvailable sizedbox" placeholder={newPlaceholder} {...register('time', {required: true})}>
+                                        {
+                                            updateTime && Object.entries(availableTime).map(([key, el], i) => el.map (item => <option key={key + i} className="lightColot" value={item}>{item}</option>))
+                                        }
+                                    </Select>
+                                </Stack>
+                                {
+                                    errors.time && <ErrorMsg>Please pick a time!</ErrorMsg>
+                                }
+                            </VStack>
+                        </HStack>
+                        <Button type="submit" my={2}>Book</Button>
+                    </FormControl>
+                </form>
+                <Modal className = "successModal hidden">
+                    <ModalBody>
+                        <p>Your booking has been requested, Please keep an eye on your mail for confirmation.</p>
+                        <SiTicktick className="tick" />
+                        <ModalButton onClick={() => {
+                            let successModal = document.querySelector(".successModal");
+                            successModal?.classList.add("hidden");
+                        }}>Close</ModalButton>
+                    </ModalBody>
+                </Modal>
+            </FormDiv>
+            <HalfDiv className="halfDiv">
+                <img src={chair} />
+            </HalfDiv>
+        </InnerDiv>
     </FlexDiv>
   )
 }
