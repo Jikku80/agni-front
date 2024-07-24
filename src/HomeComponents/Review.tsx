@@ -3,9 +3,9 @@ import { FaCircleUser } from "react-icons/fa6";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { FaCircle } from "react-icons/fa";
-import img from '../../public/img1.png';
-import brace from '../../public/brace.png';
-import fill from '../../public/filling.png';
+import img from '../../public/brush.png';
+import brace from '../../public/heart.png';
+import fill from '../../public/seat.png';
 import { useState } from 'react';
 
 const FlexDiv = style.div`
@@ -59,6 +59,7 @@ const CardHead = style.h1`
 
 const CardDetail = style.div`
     margin-bottom : 20vh;
+    text-align : center;
 `
 
 const RowFlex = style.div`
@@ -69,20 +70,20 @@ const RowFlex = style.div`
 
 const ToothImage = style.img`
     position : absolute;
-    top : 410vh;
-    left :2vw;
+    top : 460vh;
+    right :4vw;
 `
 
 const BraceImage = style.img`
     position : absolute;
-    top : 440vh;
-    right :.5vw;
+    top : 465vh;
+    left :10vw;
 `
 
 const FillImage = style.img`
     position : absolute;
-    top : 400vh;
-    left :45vw;
+    top : 520vh;
+    right : 15vw;
 `
 
 const Review = () => {

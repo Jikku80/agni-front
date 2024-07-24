@@ -84,13 +84,13 @@ const Caption = style.p`
 `
 const GapImage = style.img`
     position : absolute;
-    top : 185vh;
-    right : .5%;
+    top : 190vh;
+    right : 1%;
 `
 
 const FillImage = style.img`
     position : absolute;
-    top : 215vh;
+    top : 223vh;
     left : 15vw;
 `
 

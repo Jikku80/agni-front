@@ -30,25 +30,25 @@ const FlexDiv = style.div`
 
 const ToothImage = style.img`
     position : absolute;
-    top : 110vh;
-    left :2vw;
+    top : 120vh;
+    left :5vw;
 `
 
 const BraceImage = style.img`
     position : absolute;
-    top : 140vh;
+    top : 155vh;
     right :.5vw;
 `
 
 const FillImage = style.img`
     position : absolute;
-    top : 150vh;
-    left :45vw;
+    top : 160vh;
+    left :43vw;
 `
 
 const GapImage = style.img`
     position : absolute;
-    top : 155vh;
+    top : 164vh;
     left :20vw;
 `
 

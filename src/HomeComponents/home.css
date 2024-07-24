@@ -29,6 +29,63 @@
     color : #1777B2;
 }
 
+.bookSelect{
+    background-color: transparent;
+    width: 96.5%;
+    border: 1px solid white;
+    border-radius: .5rem;
+    color : white;
+    padding: 2%;
+    cursor: pointer;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.bookDoc{
+    margin-bottom: 0;
+}
+
+.bookCalendar{
+    margin-right: 4px;
+}
+ 
+.dateInput::-webkit-calendar-picker-indicator { filter: invert(1); }
+
+.nameInput{
+    background-color: transparent;
+    color: white;
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: .5rem;
+    width: 96.5%;
+}
+
+.txtArea{
+    background-color: transparent;
+    color: white;
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: .5rem;
+    width: 96.5% !important;
+}
+
+.timeAvailable {
+    color: white !important;
+    cursor: pointer;
+}
+
+.bookBtn{
+    display: flex !important;
+    align-items: center !important;
+    color :#1777B2 !important;
+}
+
+.btnSection{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+    margin-top: 16px;
+}
 
 @media screen and (max-width: 992px) {
     .alignLeft{
@@ -135,8 +192,7 @@
     }
 
     .serv-img{
-        width: 8vh !important;
-        height: 8vh !important;
+        
     }
 
     .serv-carddiv{

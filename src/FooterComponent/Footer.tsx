@@ -39,6 +39,7 @@ const FooterRow = style.div`
 
 const KeyValue = style.p`
     margin-left : 10px;
+    cursor : pointer;
 `
 
 const FootHead = style.h1`
@@ -48,6 +49,7 @@ const FootHead = style.h1`
 
 const Mt = style.p`
     margin-top : 10px;
+    cursor : pointer;
 `
 
 const Footer = () => {
