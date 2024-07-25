@@ -106,7 +106,9 @@ const Navbar = () => {
         </HStack>
         <BookButton className="bookbtn" onClick={() => {
           navigate('/contact-us')
-          if (ref.current != null) ref.current.style.display = "none";
+          if (window.innerWidth < 992){
+            if (ref.current != null) ref.current.style.display = "none";
+          }
         }}>Book Now <FaArrowRight /></BookButton>
       </div>
     </div>

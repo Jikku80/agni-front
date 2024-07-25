@@ -184,7 +184,7 @@ const Book = ({setLoading} : Props) => {
                             errors.specialist && <ErrorMsg>Please pick a Doctor!</ErrorMsg>
                         }
                         <HStack className="rm-hstack" my={2}>
-                            <VStack w="50%" alignItems="left">
+                            <VStack className="rm-vstackProp" w="50%" alignItems="left">
                                 <FormLabel className="white sizedlabel">Date</FormLabel>
                                 <input className="white sizedbox dateInput" type='date' {...register('date', {required: true})} onChange={async(e) => {
                                     setLoading(true);
@@ -209,7 +209,7 @@ const Book = ({setLoading} : Props) => {
                                     errors.date && <ErrorMsg>Please pick a Date!</ErrorMsg>
                                 }
                             </VStack>
-                            <VStack w="50%" alignItems="left">
+                            <VStack className="rm-vstackProp" w="50%" alignItems="left">
                                 <FormLabel className="white sizedlabel">Time</FormLabel>
                                 <select className="white timeAvailable sizedbox" {...register('time', {required: true})}>
                                     <option defaultChecked hidden>{newPlaceholder}</option>
@@ -228,14 +228,14 @@ const Book = ({setLoading} : Props) => {
                             errors.name && <ErrorMsg>Please provide your name!</ErrorMsg>
                         }
                         <HStack className="rm-hstack" my={2}>
-                            <VStack w="50%"alignItems="left">    
+                            <VStack className="rm-vstackProp" w="50%"alignItems="left">    
                                 <FormLabel className="white sizedlabel">Email</FormLabel>
                                 <input className="white sizedbox" type='email' {...register('email', {required: true})}/>
                                 {
                                     errors.email && <ErrorMsg>Please provide your email address!</ErrorMsg>
                                 }
                             </VStack>
-                            <VStack w="50%" alignItems="left">
+                            <VStack className="rm-vstackProp" w="50%" alignItems="left">
                                 <FormLabel className="white sizedlabel">Phone</FormLabel>
                                 <input className="white sizedbox" type='number' {...register('phone', {required: true})}/>
                                 {

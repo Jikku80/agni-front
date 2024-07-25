@@ -118,6 +118,7 @@
 
     .cardImage{
         width: 20vw !important;
+        height: 25vh !important;
     }
 
     .welcome-tooth{
@@ -138,12 +139,19 @@
 
     .pre-card{
         height: fit-content !important;
+        width: 100% !important;
         margin: 4% !important;
+        display:  flex;
+        justify-content: center;
     }
 
     .pre-image{
-        width: 100% !important;
-        height: 50vh !important;
+        width: 70% !important;
+        height: 30vh !important;
+    }
+
+    .cap{
+        width: 70% !important;
     }
 
     .pre-gap{
@@ -161,6 +169,14 @@
         flex-direction: column !important;
     }
 
+    .rm-vstackProp{
+        width: 100% !important;
+    }
+
+    .bookSelect, .nameInput, .txtArea{
+        width: 90% !important;
+    }
+
     .rm-flex{
         display: flex;
         align-items: left !important;
@@ -168,9 +184,13 @@
     }
 
     .sizedbox{
-        width: 60vw !important;
+        width: 68vw !important;
     }
 
+    .btnSection{
+        justify-content: flex-start;
+    }
+    
     .msgbrnch{
         display: inline-block;
     }
@@ -191,8 +211,14 @@
         padding: 0 !important;
     }
 
+    .serv-carddiv{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center  !important;
+    }
+
     .serv-img{
-        
+        width: 40% !important;
     }
 
     .serv-carddiv{

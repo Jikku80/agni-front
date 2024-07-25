@@ -118,19 +118,19 @@ const Premier = () => {
             <CardDiv className='flexDiv'>
                 <Card className='pre-card'>
                     <CardImage className="pre-image" src={braces} />
-                    <Caption>Braces</Caption>
+                    <Caption className="cap">Braces</Caption>
                 </Card>
                 <Card className='pre-card'>
                     <CardImage className="pre-image" src={implant} />
-                    <Caption>Dental Implants</Caption>
+                    <Caption className="cap">Dental Implants</Caption>
                 </Card>
                 <Card className='pre-card'>
                     <CardImage className="pre-image" src={rootcanal} />
-                    <Caption>Root Canal</Caption>
+                    <Caption className="cap">Root Canal</Caption>
                 </Card>
                 <Card className='pre-card'>
                     <CardImage className="pre-image" src={white} />
-                    <Caption>Teeth Whitening</Caption>
+                    <Caption className="cap">Teeth Whitening</Caption>
                 </Card>
             </CardDiv>
         </FlexDiv>
