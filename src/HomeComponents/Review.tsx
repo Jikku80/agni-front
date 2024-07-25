@@ -148,9 +148,9 @@ const Review = () => {
     }
   return (
     <FlexDiv>
-        <ToothImage className="welcome-tooth" src={img}/>
-        <BraceImage className="welcome-brace" src={brace}/>
-        <FillImage className="welcome-fill" src={fill}/>
+        <ToothImage className="review-brush" src={img}/>
+        <BraceImage className="review-heart" src={brace}/>
+        <FillImage className="review-seat" src={fill}/>
         <Head className="alignLeft"><Blue>Patients</Blue> Testimonials</Head>
         <p>What our happy patients has to say about us!</p>
         <CardDiv>

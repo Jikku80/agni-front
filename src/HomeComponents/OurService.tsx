@@ -105,7 +105,7 @@ const OurService = () => {
     const data = [
         {
             id : 1,
-            name : "Dental Binding",
+            name : "Dental Denture",
             image : bond
         },
         {
@@ -157,7 +157,7 @@ const OurService = () => {
             </HeadP>
         </HeadFlex>
         <p>We provide a wise range of high quality dental services.</p>
-        <SevDiv className="flexDiv">
+        <SevDiv className="servDiv">
             {
                 data.map(data => <CardDiv className="serv-carddiv" key={data.name + data.image}>
                     <CardImage className="serv-img" key={data.image} src={data.image} />

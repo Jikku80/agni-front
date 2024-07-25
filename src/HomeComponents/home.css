@@ -210,19 +210,21 @@
     .halfDiv{
         padding: 0 !important;
     }
+    
+    .servDiv{
+        display: flex !important;
+        justify-content: center !important;
+    }
 
     .serv-carddiv{
         display: flex !important;
         align-items: center !important;
         justify-content: center  !important;
+        width: 70vw !important;
     }
 
     .serv-img{
         width: 40% !important;
-    }
-
-    .serv-carddiv{
-        width: 80vw !important;
     }
 
     .serv-gap{
@@ -241,8 +243,16 @@
     }
     
     .reviewDetail{
-        font-size: 11px !important;
-        margin-bottom: 15vh !important;
+        font-size: 10px !important;
+        margin-bottom: 14vh !important;
+    }
+
+    .review-brush{
+        top: 630vh !important;
+    }
+
+    .review-heart{
+        top: 680vh !important;
     }
 
     .usericon{
