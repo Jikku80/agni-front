@@ -115,7 +115,7 @@ const Premier = () => {
                 </HeadP>
             </HeadFlex>
             <p>Get the best care with our top dental services, designed for all your oral health needs.</p>
-            <CardDiv className='flexDiv'>
+            <CardDiv className='preDiv'>
                 <Card className='pre-card'>
                     <CardImage className="pre-image" src={braces} />
                     <Caption className="cap">Braces</Caption>

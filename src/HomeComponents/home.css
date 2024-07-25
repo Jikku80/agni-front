@@ -1,3 +1,11 @@
+.covimg{
+    height: 40vh;
+    width: 100vw;
+    position: absolute !important;
+    top: 50vh;
+    left: 0;
+}
+
 .teethicon{
     font-size: 100px;
 }
@@ -87,6 +95,16 @@
     margin-top: 16px;
 }
 
+@media (max-height: 600px){
+    .cardImage{
+        height: auto !important;
+    }
+
+    .pre-card{
+        width: fit-content !important;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .alignLeft{
         text-align: left !important;
@@ -118,7 +136,7 @@
 
     .cardImage{
         width: 20vw !important;
-        height: 25vh !important;
+        height: auto !important;
     }
 
     .welcome-tooth{
@@ -137,21 +155,21 @@
         top: 160vh !important;
     }
 
+    .preDiv{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
     .pre-card{
-        height: fit-content !important;
-        width: 100% !important;
+        width: 70% !important;
+        height: auto !important;
         margin: 4% !important;
         display:  flex;
-        justify-content: center;
     }
 
     .pre-image{
-        width: 70% !important;
-        height: 30vh !important;
-    }
-
-    .cap{
-        width: 70% !important;
+        width: 100% !important;
     }
 
     .pre-gap{
@@ -262,7 +280,7 @@
     }
 
     .leftIcon, .rightIcon{
-        font-size: 50px !important;
+        font-size: 10em !important;
         z-index: 2 !important;
     }
 

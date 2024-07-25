@@ -149,14 +149,6 @@ Th{
     box-shadow: none !important;
 }
 
-.covimg{
-    height: 40vh;
-    width: 100vw;
-    position: absolute !important;
-    top: 50vh;
-    left: 0;
-}
-
 .bottomCard{
     margin-top: 10vh;
 }
