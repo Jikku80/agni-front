@@ -173,7 +173,7 @@ const Book = ({setLoading} : Props) => {
                         {
                             errors.branch && <ErrorMsg>Please pick a Branch!</ErrorMsg>
                         }
-                        <FormLabel className="white sizedlabel">Specialist</FormLabel>
+                        <FormLabel className="white sizedlabel">Doctors</FormLabel>
                         <select className="bookSelect bookDoc" defaultValue={'new'} {...register('specialist', {required: true})}>
                             <option className="lightColot" value='new'>New In Agni</option>
                             <option className="lightColot" value='Dr. James Maharjan'>Dr. James Maharjan</option>
