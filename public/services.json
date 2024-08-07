@@ -54,7 +54,7 @@
             }]
         }],
         "conclusion" : "Regular checkups are usually recommended every six months, but your dentist might suggest a different frequency based on your individual needs.",
-        "image": "../../public/one-check.png"
+        "image": "/one-check.png"
     },
 
     {
@@ -166,7 +166,7 @@
             "detail" : "With proper care, dentures can last several years, but they may eventually need to be relined, rebased, or replaced due to normal wear and changes in the mouth."
         }],
         "conclusion" : "Complete dentures are a reliable and effective solution for replacing a full set of missing teeth, helping to restore oral function, appearance, and confidence. Consulting with a dentist will help determine the best type of dentures and ensure a proper fit and care plan tailored to your needs.",
-        "image": "../../public/one-dental.png"
+        "image": "/one-dental.png"
     },
 
     {
@@ -247,7 +247,7 @@
             "detail" : "Good oral health is linked to overall health, potentially reducing the risk of conditions like heart disease and diabetes."
         }],
         "conclusion" : "Scaling is an important preventive measure to keep your teeth and gums healthy. Regular visits to the dentist and good oral hygiene practices at home are key to maintaining the benefits of scaling.",
-        "image": "../../public/one-scaling.png"
+        "image": "/one-scaling.png"
     },
 
     {
@@ -322,7 +322,7 @@
             "detail" : "Keep up with regular dental checkups and cleanings to maintain oral health and the benefits of teeth polishing."
         }],
         "conclusion" : "Teeth polishing is a simple, painless procedure that enhances the appearance and cleanliness of your teeth, contributing to overall oral health.",
-        "image": "../../public/one-polishing.png"
+        "image": "/one-polishing.png"
     },
 
     {
@@ -423,7 +423,7 @@
             "detail": "Caps placed over teeth to restore shape, size and strength"
         }],
         "conclusion" : "Teeth filing is a conservative cosmetic procedure that can make a significant difference in the appearance of your smile. Consulting with a dentist will help determine if it's the right option for you based on your dental needs and aesthetic goals.",
-        "image": "../../public/one-filing.png"
+        "image": "/one-filing.png"
     },
 
     {
@@ -520,7 +520,7 @@
             "detail": "Removable appliances that replace missing teeth."
         }],
         "conclusion": "Root canal treatment is a highly effective procedure for saving a damaged or infected tooth, relieving pain, and maintaining oral health. Consulting with your dentist will help determine if RCT is the appropriate treatment for your specific dental condition.",
-        "image": "../../public/one-rct.png"
+        "image": "/one-rct.png"
     },
 
     {
@@ -633,7 +633,7 @@
             "detail": "Both crowns and bridges require good oral hygiene and regular dental care to ensure they last as long as possible."
         }],
         "conclusion": "Crowns and bridges are effective solutions for restoring the function and appearance of damaged or missing teeth, contributing to overall dental health and a confident smile.",
-        "image": "../../public/one-crown.png"
+        "image": "/one-crown.png"
     },
 
     {
@@ -753,7 +753,7 @@
             "detail": "Realigns teeth without extraction in some overcrowding cases."
         }],
         "conclusion": "Teeth extraction is a common and often necessary procedure to maintain oral health. Consulting with your dentist will help determine the best course of action and ensure you receive the appropriate care and follow-up for a successful recovery.",
-        "image": "../../public/one-extract.png"
+        "image": "/one-extract.png"
     },
 
     {
@@ -900,7 +900,7 @@
             "detail": "Enhances the appearance of your teeth and smile."
         }],
         "conclusion": "Teeth surgery is a critical component of dental care that addresses various conditions to improve oral health and overall quality of life. Consulting with a qualified dentist or oral surgeon will help determine the best surgical approach for your specific needs and ensure a successful outcome.",
-        "image": "../../public/one-surgery.png"
+        "image": "/one-surgery.png"
     },
 
     {
@@ -1002,7 +1002,7 @@
         }],
         "consideration": [{"title": "", "detail" :"Braces binding is essential for the effectiveness of orthodontic treatment. It ensures that the braces continue to apply the appropriate amount of pressure to gradually move teeth into their correct positions. Regular adjustments are key to achieving the desired results and maintaining oral health throughout the treatment process."}],
         "conclusion": "If you have specific concerns or questions about your braces adjustments, it’s best to consult with your orthodontist, who can provide personalized advice and care tailored to your treatment plan.",
-        "image": "../../public/one-braces.png"
+        "image": "/one-braces.png"
     },
 
     {
@@ -1119,13 +1119,13 @@
             "detail": "Adequate bone density is necessary for successful implant placement. In some cases, bone grafting may be required if there is insufficient bone."
         }],
         "conclusion": "Dental implants are a highly effective and long-lasting solution for replacing missing teeth, providing a natural look and function while preserving overall oral health. Consulting with your dentist or oral surgeon will help determine if dental implants are the right option for you and guide you through the process.",
-        "image": "../../public/one-implant.png"
+        "image": "/one-implant.png"
     },
 
     {
         "id": 12,
         "name": "Others",
         "desc": "At Agni Dental, we offer a diverse range of specialized dental services beyond routine care to ensure your smile remains healthy and vibrant. Our additional services include professional teeth whitening for a brighter, more radiant smile, and dental veneers or bonding to address imperfections such as chips or discoloration. We also provide gum contouring to enhance your gum line and orthodontic treatments, including braces and clear aligners, to correct alignment issues. For those with more complex needs, our root canal therapy, dental crowns and bridges, and oral surgery options offer effective solutions for preserving and restoring your dental health. With our comprehensive approach and state-of-the-art technology, we are dedicated to delivering exceptional care tailored to your unique needs, ensuring a confident and beautiful smile for years to come.",
-        "image": "../../public/one-others.png"
+        "image": "/one-others.png"
     }
 ]
