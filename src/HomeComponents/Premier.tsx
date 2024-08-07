@@ -32,10 +32,9 @@ const HeadP = style.div`
     justify-content : space-between;
     align-items : center;
     color : #3182ce;
-    
-    &:hover{
-        cursor : pointer;
-    }
+    cursor : pointer;
+    width : fit-content;
+    z-index : 2;
 `
 
 const RightMargin = style.p`
@@ -116,19 +115,19 @@ const Premier = () => {
             </HeadFlex>
             <p>Get the best care with our top dental services, designed for all your oral health needs.</p>
             <CardDiv className='preDiv'>
-                <Card className='pre-card'>
+                <Card className='pre-card' onClick={() => navigate('/services/10')}>
                     <CardImage className="pre-image" src={braces} />
                     <Caption className="cap">Braces</Caption>
                 </Card>
-                <Card className='pre-card'>
+                <Card className='pre-card' onClick={() => navigate('/services/11')}>
                     <CardImage className="pre-image" src={implant} />
                     <Caption className="cap">Dental Implants</Caption>
                 </Card>
-                <Card className='pre-card'>
+                <Card className='pre-card' onClick={() => navigate('/services/6')}>
                     <CardImage className="pre-image" src={rootcanal} />
                     <Caption className="cap">Root Canal</Caption>
                 </Card>
-                <Card className='pre-card'>
+                <Card className='pre-card' onClick={() => navigate('/services/4')}>
                     <CardImage className="pre-image" src={white} />
                     <Caption className="cap">Teeth Whitening</Caption>
                 </Card>

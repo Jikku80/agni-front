@@ -1,4 +1,4 @@
-import  style from 'styled-components';
+import style from 'styled-components';
 import bond from '../../public/serv-bond.png';
 import braces from '../../public/serv-brace.png';
 import scaling from '../../public/serv-scaling.png';
@@ -7,39 +7,22 @@ import polish from '../../public/serv-polishing.png';
 import filing from '../../public/serv-filing.png';
 import teeth from '../../public/serv-teeth.png';
 import check from '../../public/serv-check.png';
-import { FaArrowRight } from "react-icons/fa";
+import crown from '../../public/crown.png';
+import extract from '../../public/extract.png';
+import surgery from '../../public/surgery.png';
+import others from '../../public/others.png';
 import { useNavigate } from 'react-router-dom';
-
-import gap from '../../public/gap.png';
-import fill from '../../public/disect.png';
-import specs from '../../public/specs.png';
+import { useEffect } from 'react';
 
 const FlexDiv = style.div`
-    margin-top: 10vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left : 5%;
+    margin-right : 5%;
 `
 
-const  Head = style.h1`
-    font-size : 28px;
-    margin-bottom : 16px;
-    font-weight : 600;
-    display : flex;
-`
-
-const HeadP = style.div`
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-    color : #3182ce;
-    
-    &:hover{
-        cursor : pointer;
-    }
-`
-
-const Blue = style.span`
-    color :#3182ce;
+const Head = style.h1`
+    font-size : 24px;
+    margin-top : 2%;
+    margin-bottom : 1%;
 `
 
 const SevDiv = style.div`
@@ -58,7 +41,6 @@ const CardDiv =style.div`
     cursor : pointer;
     background-color : #107FC31C;;
     border-radius : .5rem;
-    z-index : 2;
 
     &:hover{
         box-shadow: 1px 1px 5px 5px #107FC363;
@@ -68,39 +50,8 @@ const CardDiv =style.div`
 const CardImage = style.img`
     width : 80%;
 `
-const GapImage = style.img`
-    position : absolute;
-    top : 385vh;
-    right : 3%;
-`
 
-const SpecsImage = style.img`
-    position : absolute;
-    top : 345vh;
-    right : 35%;
-`
-
-const FillImage = style.img`
-    position : absolute;
-    top : 400vh;
-    right : 25vw;
-`
-
-const HeadFlex = style.div`
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-    width : 100%;
-`
-
-const RightMargin = style.p`
-    margin-right : 1vw;
-    &:hover{
-        cursor : pointer;
-    }
-`
-
-const OurService = () => {
+const AllServices = () => {
     const navigate = useNavigate();
     const data = [
         {
@@ -142,31 +93,45 @@ const OurService = () => {
             id : 1,
             name : "Check Ups",
             image : check
+        },
+        {
+            id : 7,
+            name : "Crowning / Bridge",
+            image : crown
+        },
+        {
+            id : 8,
+            name : "Teeth Extraction",
+            image : extract
+        },
+        {
+            id : 9,
+            name : "Surgery Case",
+            image : surgery
+        },
+        {
+            id : 12,
+            name : 'Others',
+            image : others
         }
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
   return (
     <FlexDiv>
-        <GapImage className="serv-gap" src={gap}/>
-        <FillImage className="serv-fill" src={fill}/>
-        <SpecsImage className="serv-spec" src={specs} />
-        <HeadFlex className='flexDiv'>
-            <Head className="alignLeft">Our <Blue className='Mr'>Services</Blue></Head>
-            <HeadP onClick={() => navigate('/services')}>
-                <RightMargin>View All Services</RightMargin>
-                <FaArrowRight/>
-            </HeadP>
-        </HeadFlex>
-        <p>We provide a wise range of high quality dental services.</p>
-        <SevDiv className="servDiv">
+      <Head>All Services</Head>
+      <p>We provide a wise range of high quality dental services.</p>
+      <SevDiv className="servDiv">
             {
                 data.map(data => <CardDiv className="serv-carddiv" key={data.name + data.image} onClick={() => navigate(`/services/${data.id}`)}>
                     <CardImage className="serv-img" key={data.image} src={data.image} />
                 </CardDiv>)
             }
         </SevDiv>
-        
     </FlexDiv>
   )
 }
 
-export default OurService
+export default AllServices

@@ -1,4 +1,4 @@
-import { Button, Stack } from '@chakra-ui/react'
+import { Button, Stack, useDisclosure } from '@chakra-ui/react'
 import { MdLogin } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -10,6 +10,16 @@ import { TfiReload } from "react-icons/tfi";
 import AllAppointments from './GetAppointment';
 import io from 'socket.io-client';
 import style from 'styled-components';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+import BookForm from './BookForm';
 
 const FlexDiv = style.div`
     display : flex;
@@ -31,6 +41,7 @@ interface Props{
 
 const AppointmentContent = ({ setEntity, setLoading} : Props) => {
     const navigate = useNavigate();
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const socket = io(`${import.meta.env.VITE_NODE_URL}`)
     const [current, setCurrent] = useState('');
     const [showComponent, setShowComponent] = useState(false);
@@ -138,6 +149,23 @@ const AppointmentContent = ({ setEntity, setLoading} : Props) => {
       <FlexDiv>
         {current == 'superuser' && <Button color="#4A5568" onClick={() => navigate('/all/patient')}>Patient</Button>}
         <Button color="#4A5568" onClick={() => navigate('/patient-entry')}>Add Patient</Button>
+        <Button color="#4A5568" onClick={onOpen}>Book</Button>
+        <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Set Time Unavailable</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <BookForm setLoading={setLoading} />
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme='blue' mr={3} onClick={onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
         <TfiReload title='Reload Appointments' className="reloadIcon" onClick={getAppointment} />
         <AppointmentSearch setAppointment={setAppointment} setLoading={setLoading} setSearchVal={setSearchVal} setTotalPage = {setTotalPage} setShowPaginate={setShowPaginate} setCounter={setCounter} setShowPrevPaginate = {setShowPrevPaginate} setFilterVal={setFilterVal}/>
         <AppointmentFilter setAppointment={setAppointment} setLoading={setLoading} setSearchVal={setSearchVal} setTotalPage = {setTotalPage} setShowPaginate={setShowPaginate} setCounter={setCounter} setShowPrevPaginate = {setShowPrevPaginate} setFilterVal={setFilterVal}/>

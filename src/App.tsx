@@ -15,6 +15,8 @@ import Patient from "./PatientComponent/Patient";
 import PatientRecord from "./PatientRecordComponents/PatientRecord";
 import PatientSubRecord from "./PatientSubRecordComponent/PatientSubRecord";
 import PatientAll from "./PatientAllComponent/PatientAll";
+import Footer from "./FooterComponent/Footer";
+import ServicesDetail from "./ServicesComponents/ServicesDetail";
 
 function App() {
   const [isEntity, setEntity] = useState({
@@ -33,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setLoading = {setLoading}/>} />
         <Route path="services" element={<Service />} />
+        <Route path='services/:id' element={<ServicesDetail />} />
         <Route path="specialist" element={<Specialist />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact-us" element={<Contact setLoading = {setLoading}/>} />
@@ -44,6 +47,7 @@ function App() {
         <Route path="/patient/:id/sub-record/:phone" element={<PatientSubRecord isEntity={isEntity._id} setEntity={setEntity} setLoading={setLoading} />} />
         <Route path="all/patient" element={<PatientAll isEntity={isEntity._id} setEntity={setEntity} setLoading={setLoading} />} />
       </Routes>
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,1131 @@
+[
+    {
+        "id": 1,
+        "name" : "Check Ups",
+        "desc" : "Regular dental checkups are crucial for maintaining good oral health. Here's what typically happens during a teeth/mouth checkup:",
+        "procedure" : [{
+            "title" : "Medical History Review",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The dentist or dental hygienist will review your medical history and ask about any recent changes in your health, medications, or any dental concerns."
+            }]
+        },
+        {
+            "title" : "Examination",
+            "detail" : [{
+                    "subtitle" : "Visual Exam",
+                    "subdetail" : "Checking the teeth, gums, tongue, and mouth for signs of decay, gum disease, and other oral health issues."
+                },
+                {
+                    "subtitle" : "Probing",
+                    "subdetail" : "Measuring the depth of gum pockets to check for gum disease."
+                },
+                {
+                    "subtitle" : "Bite Check",
+                    "subdetail" : "Examining how your teeth fit together and checking for issues with your bite."
+                }]
+        },
+        {
+            "title" : "X-Rays",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Taking dental X-rays to see what's happening beneath the surface of your teeth and gums. This helps identify issues like cavities, impacted teeth, and bone loss." 
+            }]
+        },
+        {
+            "title" : "Oral Cancer Screening",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Checking for signs of oral cancer by examining the face, neck, lips, tongue, throat, tissues, and gums for any abnormalities."
+            }]
+        },
+        {
+            "title" : "Education and Reecommendations",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Discussing any findings and providing advice on improving your oral hygiene routine. The dentist may recommend treatments or follow-up appointments if necessary." 
+            }]
+        },
+        {
+            "title" : "Fluoride Treatment",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "In some cases, a fluoride treatment may be applied to help strengthen the teeth and prevent decay." 
+            }]
+        }],
+        "conclusion" : "Regular checkups are usually recommended every six months, but your dentist might suggest a different frequency based on your individual needs.",
+        "image": "../../public/one-check.png"
+    },
+
+    {
+        "id": 2,
+        "name" : "Dental Denture",
+        "desc" : "A full set of teeth, or complete dentures, refers to a prosthetic device that replaces all of the natural teeth in the upper and/or lower jaw. This option is often chosen when a person has lost most or all of their natural teeth due to decay, gum disease, or injury. Complete dentures can restore functionality and aesthetics, enabling the wearer to eat, speak, and smile with confidence.",
+        "types" : [{
+            "title" : "Conventional Dentures",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "These are fully removable and are placed in the mouth after any remaining teeth are removed and the gum tissue has healed. This process can take several months."
+            }]
+        },{
+            "title" : "Immediate Dentures",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "These are placed immediately after the remaining teeth are removed. They serve as a temporary solution while the gums heal and shrink. Adjustments may be necessary as the mouth heals."
+            }]
+        },{
+            "title" : "Implant Supported Dentures",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "These are anchored to dental implants that are surgically placed in the jawbone. They offer increased stability and support compared to traditional dentures."
+            }]
+        }],
+        "procedure" : [{
+            "title" : "Initial Consulation",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The dentist evaluates your oral health, takes X-rays, and discusses your options. Impressions of your mouth may be taken to create custom-fit dentures."
+            }]
+        },{
+            "title" : "Tooth Extraction (If Needed)",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "If there are any remaining teeth, they may need to be extracted before fitting the dentures."
+            }]
+        },{
+            "title" : "Healing Period (for conventional dentures)",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The gums are allowed to heal after tooth extraction, which can take a few months. During this time, the gums and bone structure may change shape."
+            }]
+        },{
+            "title" : "Impression and Measurements",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Detailed impressions of your mouth and jaw are taken to ensure the dentures fit well. Measurements are also taken to ensure that the dentures will align properly and function correctly."
+            }]
+        },{
+            "title" : "Try-In",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "A preliminary set of dentures may be made for fitting purposes. The dentist will check the fit, comfort, and appearance, making any necessary adjustments."
+            }]
+        },{
+            "title" : "Final Dentures",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Once the fit and appearance are satisfactory, the final dentures are created. They are then fitted and adjusted as needed."
+            }]
+        },{
+            "title" : "Follow-Up Appointments",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "After the dentures are fitted, follow-up appointments are essential to adjust and ensure they fit well and are comfortable."
+            }]
+        }],
+        "benefits" : [{
+            "title" : "Restores Functionality",
+            "detail" : "Allows for normal eating and speaking, improving overall quantity of life"
+        },{
+            "title" : "Enhances Appearance",
+            "detail" : "Replaces missing teeth, supporting facial structure and providing a natural-looing smile"
+        },{
+            "title" : "Boosts Confidence",
+            "detail" : "Helps improve self-esteem and confidence by restoring a complete set of teeth"
+        },{
+            "title" : "Affordabale Option",
+            "detail" : "Compared to dental implants or bridges, dentures are often a more cost-effective solution."
+        }],
+        "aftercare" : [{
+            "title" : "Cleaning",
+            "detail" : "Clean your dentures daily using a soft brush and denture cleaner. Avoid using regular toothpaste as it can be too abrasive."
+        }, {
+            "title" : "Soaking",
+            "detail" : "Soak dentures in a denture-cleaning solution when not in use to keep them moist and maintain their shape."
+        }, {
+            "title" : "Oral Hygiene",
+            "detail" : "Maintain good oral hygiene by brushing your gums, tongue, and any remaining natural teeth daily to prevent infections and maintain oral health."
+        }, {
+            "title" : "Regular Checkups",
+            "detail" : "Visit your dentist regularly to check the fit and condition of your dentures and to monitor your oral health"
+        }, {
+            "title" : "Avoid Hard Foods",
+            "detail" : "Be cautious with hard or sticky foods that can damage the dentures or cause discomfort."
+        }],
+        "consideration" : [{
+            "title" : "Adjustment Period",
+            "detail" : "It may take time to get used to wearing dentures, including adapting to speaking and eating."
+        }, {
+            "title" : "Fit and Comfort",
+            "detail" : "Dentures may require adjustments to ensure a comfortable and secure fit, especially if the gums and bone structure change over time."
+        }, {
+            "title" : "Potential For Slippage",
+            "detail" : "Traditional dentures can sometimes slip or move, particularly if they are not well-fitted. Implant-supported dentures offer a more stable solution."
+        }, {
+            "title" : "Longevity",
+            "detail" : "With proper care, dentures can last several years, but they may eventually need to be relined, rebased, or replaced due to normal wear and changes in the mouth."
+        }],
+        "conclusion" : "Complete dentures are a reliable and effective solution for replacing a full set of missing teeth, helping to restore oral function, appearance, and confidence. Consulting with a dentist will help determine the best type of dentures and ensure a proper fit and care plan tailored to your needs.",
+        "image": "../../public/one-dental.png"
+    },
+
+    {
+        "id": 3,
+        "name" : "Scaling",
+        "desc" : "Scaling is a dental procedure aimed at removing plaque and tartar (calculus) from the surfaces of teeth, especially below the gum line. It's an essential part of maintaining oral hygiene and preventing gum disease. Here's what you need to know about scaling:",
+        "practices" : [{
+            "title" : "Removing Plaque and Tartar",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail":"Plaque is a sticky film of bacteria that forms on teeth. If not removed, it hardens into tartar, which can only be removed by a dental professional."
+            }]
+        }, {
+            "title" : "Cleaning Below the Gum Line",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Scaling involves cleaning the areas below the gum line to prevent or treat gum disease (periodontitis)."
+            }]
+        }],
+        "procedure" : [{
+            "title" : "Initial Examination",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The dentist or dental hygienist will examine your mouth and may take X-rays to assess the extent of plaque and tartar buildup."
+            }]
+        }, {
+            "title" : "Anesthesia",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Depending on the extent of the scaling needed, local anesthesia might be used to numb the area and ensure your comfort."
+            }]
+        }, {
+            "title" : "Scaling",
+            "detail" : [{
+                "subtitle" : "Manual Instruments",
+                "subdetail" : "Hand-held scalers and curettes are used to manually remove plaque and tartar."
+            }, {
+                "subtitle" : "Ultrasonic Scalers",
+                "subdetail" : "These use ultrasonic vibrations to break up tartar, combined with a water spray to wash away debris."
+            }]
+        },{
+            "title" : "Root Planning",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "After scaling, the root surfaces are smoothed (planed) to help the gums reattach to the teeth and make it harder for plaque to accumulate in the future."
+            }]
+        }, {
+            "title" : "Rinse and Fluoride Treatment",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The mouth is rinsed to remove any debris, and a fluoride treatment may be applied to strengthen the teeth."
+            }]
+        }],
+        "aftercare" : [{
+            "title" : "Soreness and Sensitivity",
+            "detail" : "It's common to experience some soreness and sensitivity after scaling, especially to cold or hot temperatures. This typically subsides within a few days."
+        }, {
+            "title" : "Oral Hygiene",
+            "detail" : "Maintain a good oral hygiene routine, including brushing twice a day with a fluoride toothpaste, flossing daily, and using an antiseptic mouthwash if recommended."
+        }, {
+            "title" : "Diet",
+            "detail" : "Avoid hard, crunchy, or sticky foods immediately after the procedure. Opt for softer foods until any soreness subsides."
+        }, {
+            "title" : "Follow-Up Appointments",
+            "detail" : "Regular dental checkups and cleanings are important to monitor your oral health and prevent further buildup of plaque and tartar."
+        }],
+        "benefits" : [{
+            "title" : "Prevents Gum Disease",
+            "detail" : "Regular scaling can prevent the progression of gum disease, which can lead to tooth loss if left untreated."
+        }, {
+            "title" : "Improves Oral Hygiene",
+            "detail" : "Removing plaque and tartar helps maintain clean teeth and gums, reducing the risk of cavities and bad breath."
+        }, {
+            "title" : "Enhances Appearance",
+            "detail" : "Scaling can remove surface stains and make your teeth look cleaner and brighter."
+        }, {
+            "title" : "Promotes Overall Health",
+            "detail" : "Good oral health is linked to overall health, potentially reducing the risk of conditions like heart disease and diabetes."
+        }],
+        "conclusion" : "Scaling is an important preventive measure to keep your teeth and gums healthy. Regular visits to the dentist and good oral hygiene practices at home are key to maintaining the benefits of scaling.",
+        "image": "../../public/one-scaling.png"
+    },
+
+    {
+        "id": 4,
+        "name" : "Polishing",
+        "desc" : "Teeth polishing is a common dental procedure often performed after scaling during a routine dental cleaning. It aims to smooth and shine the surfaces of your teeth, making them look cleaner and feel smoother. Here’s what you need to know about teeth polishing:",
+        "procedure" : [{
+            "title" : "Scaling First",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Before polishing, a thorough scaling is performed to remove tartar and plaque from the teeth and below the gum line."
+            }]
+        }, {
+            "title" : "Polishing Paste",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "A special gritty toothpaste-like substance is used. This paste usually contains fluoride and is available in different flavors."
+            }]
+        }, {
+            "title" : "Polishing Tool",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "A dental hygienist uses a small, handheld tool with a rubber or bristle cup that spins at high speed. This tool applies the polishing paste to the teeth."
+            }]
+        }, {
+            "title" : "Polishing Motion",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The dental professional will gently move the polishing tool over the teeth surfaces in a circular motion, ensuring all areas are polished."
+            }]
+        }, {
+            "title" : "Rinse",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "After polishing, your mouth is thoroughly rinsed to remove any remaining paste and debris."
+            }]
+        }],
+        "benefits" : [{
+            "title" : "Improves Appearance",
+            "detail" : "Polishing removes surface stains from foods, drinks, and tobacco, making your teeth look brighter and cleaner."
+        }, {
+            "title" : "Prevents Plaque Buildup",
+            "detail" : "Smoothing the tooth surface makes it harder for plaque and bacteria to adhere, which helps in maintaining oral hygiene."
+        }, {
+            "title" : "Freshens Breath",
+            "detail" : "Removing plaque and surface debris can help reduce bad breath"
+        }, {
+            "title" : "Feels Smooth and Clean",
+            "detail" : "Teeth feel smoother and cleaner after polishing, which can enhance the overall sensation of a clean mouth."
+        }],
+        "consideration" : [{
+            "title" : "Stain Removal",
+            "detail" : "Polishing is effective for removing surface stains but does not change the natural color of your teeth. For deeper or intrinsic stains, teeth whitening treatments may be needed."
+        }, {
+            "title" : "Frequency",
+            "detail" : "Polishing is typically done during routine dental cleanings every six months. However, the frequency may vary based on individual needs and the recommendation of your dentist."
+        }, {
+            "title" : "Not for Everyone",
+            "detail" : "In cases of severe gum disease or tooth sensitivity, polishing might be avoided or done with caution to prevent irritation or discomfort."
+        }, {
+            "title" : "Maintenance",
+            "detail" : "Maintain good oral hygiene by brushing twice a day, flossing daily, and using mouthwash to keep your teeth clean and minimize staining between dental visits."
+        }],
+        "aftercare" : [{
+            "title" : "Avoid Staining Foods and Drinks",
+            "detail" : "To maintain the polished look, try to avoid foods and drinks that can stain your teeth, like coffee, tea, red wine, and certain berries."
+        }, {
+            "title" : "Regular Oral Hygiene",
+            "detail" : "Continue with regular brushing and flossing to keep your teeth clean and free from plaque and stains."
+        }, {
+            "title" : "Regular Dental Visits",
+            "detail" : "Keep up with regular dental checkups and cleanings to maintain oral health and the benefits of teeth polishing."
+        }],
+        "conclusion" : "Teeth polishing is a simple, painless procedure that enhances the appearance and cleanliness of your teeth, contributing to overall oral health.",
+        "image": "../../public/one-polishing.png"
+    },
+
+    {
+        "id": 5,
+        "name" : "Filing",
+        "desc" : "Teeth filing, also known as dental contouring or enameloplasty, is a cosmetic dental procedure that involves removing small amounts of tooth enamel to change the shape, length, or surface of one or more teeth. This procedure is typically done to improve the appearance of the teeth and achieve a more balanced and aesthetically pleasing smile.",
+        "practices" : [{
+            "title": "Chipped or Uneven Teeth",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Smoothing out chips or leveling uneven edges"
+            }]
+        }, {
+            "title" : "Minor Overlapping",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Reducing slight overlaps between teeth"
+            }]
+        }, {
+            "title" : "Pointed Teeth",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Rounding off pointed teeth (e.g, canines)"
+            }]
+        }, {
+            "title" : "Length Adjustment",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Making teeth appear more uniform in length"
+            }]
+        }],
+        "procedure" : [{
+            "title" : "Initial Consulation",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": " The dentist will examine your teeth and discuss your goals and expectations. X-rays may be taken to ensure there are no issues beneath the enamel that need addressing."
+            }]
+        }, {
+            "title" : "Planning",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The dentist will mark the areas of the teeth that need reshaping and discuss the proposed changes with you."
+            }]
+        }, {
+            "title" : "Filing",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "Using specialized dental instruments, the dentist will carefully file away small amounts of enamel from the targeted teeth. This process is precise and conservative to avoid removing too much enamel."
+            }]
+        }, {
+            "title": "Smoothing and Polishing",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "After reshaping, the dentist will smooth and polish the teeth to ensure a natural and attractive appearance."
+            }]
+        }],
+        "benefits" : [{
+            "title": "Improves Appearance",
+            "detail" : "Creates a more balanced, symmetrical, and attractive smile."
+        }, {
+            "title" : "Quick and Painless",
+            "detail": "The procedure is usually quick and painless since it only involves the outer enamel, which has no nerves."
+        }, {
+            "title" : "Non-Invasive",
+            "detail" : "It does not require anesthesia or significant recovery time."
+        }, {
+            "title": "Cost-Effective",
+            "detail": "Compared to other cosmetic procedures like veneers or crowns, teeth filing is relatively inexpensive."
+        }],
+        "consideration" : [{
+            "title": "Amount of Enamel Removed",
+            "detail": "Only a small amount of enamel can be safely removed. Excessive filing can weaken the tooth and make it more susceptible to damage and sensitivity."
+        }, {
+            "title": "Suitability",
+            "detail": "Not everyone is a candidate for teeth filing. It is best suited for minor imperfections. More significant dental issues may require other treatments."
+        }, {
+            "title": "Permanent Changes",
+            "detail": "Since enamel does not regenerate, the changes made during filing are permanent."
+        }],
+        "aftercare": [{
+            "title": "Oral Hygiene",
+            "detail": "Maintain good oral hygiene practices, including brushing twice a day and flossing daily, to keep your teeth healthy"
+        }, {
+            "title": "Regular Dental Visits",
+            "detail": "Continue with regular dental checkups to monitor the health and appearance of your teeth."
+        }, {
+            "title" : "Avoid Hard Foods",
+            "detail": "Be cautious with hard or crunchy foods that could damage the reshaped teeth."
+        }],
+        "alternatives": [{
+            "title": "Veneers",
+            "detail": "Thin shells of porcelain or composite resin bonded to the front of teeth to improve appearance."
+        }, {
+            "title" : "Bonding",
+            "detail": "Applying a tooth-colored resin to correct chips, gaps and other imperfections"
+        }, {
+            "title": "Crowns",
+            "detail": "Caps placed over teeth to restore shape, size and strength"
+        }],
+        "conclusion" : "Teeth filing is a conservative cosmetic procedure that can make a significant difference in the appearance of your smile. Consulting with a dentist will help determine if it's the right option for you based on your dental needs and aesthetic goals.",
+        "image": "../../public/one-filing.png"
+    },
+
+    {
+        "id": 6,
+        "name": "RCT",
+        "desc": "Root canal treatment (RCT), also known as endodontic therapy, is a dental procedure used to treat infection or damage within the tooth's pulp (the innermost part of the tooth containing nerves and blood vessels). This treatment is necessary when the pulp becomes inflamed or infected due to deep decay, repeated dental procedures, faulty crowns, or a crack or chip in the tooth.",
+        "procedure": [{
+            "title": "Initial Examination",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The dentist or endodontist will examine your tooth and take X-rays to assess the extent of the infection or damage and to see the shape of the root canals."
+            }]
+        }, {
+            "title": "Anesthesia",
+            "detail": [{
+                "subtitle": "",
+                "subdetail":"Local anesthesia is administered to numb the tooth and the surrounding area, ensuring you are comfortable during the procedure."
+            }]
+        }, {
+            "title": "Access Opening",
+            "detail": [{
+                "subtitle": "",
+                "subdetail" : "A small opening is made in the crown of the tooth to access the pulp chamber and root canals."
+            }]
+        }, {
+            "title": "Pulp Removal",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The infected or damaged pulp is carefully removed using special instruments called files. The root canals are cleaned and shaped to prepare them for filling."
+            }]
+        }, {
+            "title": "Disinfection",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The canals are thoroughly disinfected to remove any remaining bacteria and prevent future infection."
+            }]
+        }, {
+            "title": "Filling",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The cleaned and shaped root canals are filled with a biocompatible material called gutta-percha. The access opening is temporarily sealed with a filling."
+            }]
+        }, {
+            "title": "Permanent Restoration",
+            "detail": [{
+                "subtitle":"",
+                "subdetail": "After the root canal is completed, a permanent restoration, such as a crown, is usually placed to protect the tooth and restore its function. This step may be done in a separate appointment."
+            }]
+        }],
+        "benefits": [{
+            "title": "Saves Natural Tooth",
+            "detail": "RCT preserves your natural tooth, maintaining your bite and jaw structure."
+        }, {
+            "title": "Relieves Pain",
+            "detail": "It alleviates the pain caused by an infected or inflamed pulp."
+        }, {
+            "title": "Prevets Spread of Infection",
+            "detail": "Removes the source of infection, preventing it from spreading to other teeth or parts of your body."
+        }, {
+            "title": "Restores Function",
+            "detail": "Allows the tooth to function normally for the biting and chewing"
+        }],
+        "aftercare": [{
+            "title": "Pain Management",
+            "detail": "Some discomfort or mild pain is normal after the procedure, which can be managed with over-the-counter pain relievers."
+        }, {
+            "title": "Avoid Chewing on the Treated Tooth",
+            "detail": "Until the permanent restoration is placed, avoid chewing on the treated tooth to prevent damage."
+        }, {
+            "title": "Maintian Oral Hygiene",
+            "detail": "Continue to brush and floss regularly to keep your teeth and gums healthy"
+        }, {
+            "title": "Follow-Up Vists",
+            "detail": "Attend any follow-up appointments with your dentist to monitor the treated tooth and place the final restoration."
+        }],
+        "consideration" : [{
+            "title": "Multiple Visits",
+            "detail": "RCT may require one or more visits to complete, especially if a crown is needed."
+        }, {
+            "title": "Cost",
+            "detail": "The cost of root canal treatment can vary depending on the complexity of the case and the tooth involved."
+        }, {
+            "title": "Longevity",
+            "detail": "With proper care, a tooth that has undergone root canal treatment can last a lifetime. However, it may eventually require additional treatment or restoration."
+        }],
+        "alternatives": [{
+            "title": "Dental Implants",
+            "detail": "An artificial tooth root placed into the jawbone to hold a replacement tooth or bridge."
+        }, {
+            "title": "Bridges",
+            "detail": "A prosthetic device anchored to adjacent teeth to replace one or more missing teeth."
+        }, {
+            "title": "Dentures",
+            "detail": "Removable appliances that replace missing teeth."
+        }],
+        "conclusion": "Root canal treatment is a highly effective procedure for saving a damaged or infected tooth, relieving pain, and maintaining oral health. Consulting with your dentist will help determine if RCT is the appropriate treatment for your specific dental condition.",
+        "image": "../../public/one-rct.png"
+    },
+
+    {
+        "id": 7,
+        "name": "Crowning / Bridge",
+        "desc": "Dental crowns and bridges are restorative dental procedures used to repair damaged teeth or replace missing teeth, enhancing both function and aesthetics. Here’s an overview of each:",
+        "procedure" : [{
+            "title": "Procedure for Crowning",
+            "detail": [{"subtitle": "", "subdetail": ""}]
+        }, {
+            "title": "Preparation",
+            "detail" : [{
+                "subtitle": "",
+                "subdetail": "The dentist numbs the tooth and surrounding gum tissue. The tooth is shaped to make space for the crown. This involves removing a portion of the tooth's structure."
+            }]
+        }, {
+            "title": "Impression",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "An impression of the prepared tooth and surrounding teeth is taken to create a custom-fit crown. The impression is sent to a dental lab where the crown is fabricated, which may take a few weeks."
+            }]
+        }, {
+            "title": "Temporary Crown",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "A temporary crown is placed over the prepared tooth to protect it until the permanent crown is ready."
+            }]
+        }, {
+            "title": "Permanent Crown Placement",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The temporary crown is removed, and the permanent crown is fitted and adjusted for proper bite and comfort. The crown is then cemented in place."
+            }]
+        },{
+            "title": "Procedure for Bridges",
+            "detail": [{"subtitle": "", "subdetail": ""}]
+        }, {
+            "title": "Preparation of Adjacent Teeth",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The teeth on either side of the gap (abutment teeth) are prepared by removing a portion of their structure to accommodate the crowns that will support the bridge."
+            }]
+        }, {
+            "title":  "Impression",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "An impression of the prepared teeth and the gap is taken to create a custom-fit bridge. The impression is sent to a dental lab where the bridge is fabricated."
+            }]
+        }, {
+            "title": "Temporary Bridge",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "A temporary bridge is placed to protect the prepared teeth and fill the gap until the permanent bridge is ready."
+            }]
+        }, {
+            "title": "Permanent Bridge Placement",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The temporary bridge is removed, and the permanent bridge is fitted and adjusted for proper bite and comfort. The bridge is then cemented in place."
+            }]
+        }],
+        "benefits": [{
+            "title": "Benefits of Crowns",
+            "detail": ""
+        }, {
+            "title": "Strength and Protection",
+            "detail": "Crowns protect weakened teeth from further damage."
+        }, {
+            "title": "Restoration",
+            "detail": "They restore the function and appearance of damaged or decayed teeth."
+        }, {
+            "title": "Durability",
+            "detail": "Crowns can last many years with proper care."
+        }, {
+            "title": "Aesthetics",
+            "detail": "They improve the appearance of teeth by covering discoloration, misshaping, or other imperfections."
+        },{
+            "title": "Benefits of Bridges"
+        }, {
+            "title": "Restored Function",
+            "detail": "Bridges restore the ability to chew and speak properly."
+        }, {
+            "title": "Aesthetic Improvement",
+            "detail": "They improve the appearance of the smile by filling the gap left by missing teeth."
+        }, {
+            "title": "Preventing Teeth Shifting",
+            "detail": "Bridges prevent adjacent teeth from shifting into the empty space, maintaining proper alignment."
+        }, {
+            "title": "Long-Lasting",
+            "detail": "With proper care, bridges can last many years."
+        }],
+        "aftercare" : [{
+            "title": "Oral Hygiene",
+            "detail": "Maintain good oral hygiene by brushing twice a day, flossing daily, and using an antiseptic mouthwash."
+        }, {
+            "title": "Regular Dental Visits",
+            "detail": "Visit your dentist regularly for checkups and cleanings to ensure the longevity of your crowns and bridges."
+        }, {
+            "title": "Avoid Hard Foods",
+            "detail": "Avoid biting down on hard foods or objects to prevent damage to the crowns or bridges."
+        }, {
+            "title": "Monitor for Issues",
+            "detail": "Be aware of any discomfort, sensitivity, or changes in bite, and report them to your dentist promptly."
+        }],
+        "consideration": [{
+            "title": "Cost",
+            "detail": "The cost of crowns and bridges can vary based on materials used, the complexity of the procedure, and individual dental needs."
+        }, {
+            "title": "Longevity",
+            "detail": "Both crowns and bridges require good oral hygiene and regular dental care to ensure they last as long as possible."
+        }],
+        "conclusion": "Crowns and bridges are effective solutions for restoring the function and appearance of damaged or missing teeth, contributing to overall dental health and a confident smile.",
+        "image": "../../public/one-crown.png"
+    },
+
+    {
+        "id": 8,
+        "name": "Teeth Extraction",
+        "desc": "Teeth extraction, or tooth removal, is a common dental procedure performed for various reasons, such as severe decay, gum disease, overcrowding, or to prepare for orthodontic treatment. Here's a comprehensive guide to teeth extraction:",
+        "resons": [{
+            "title": "Severe Tooth Decay or Infection",
+            "detail": "When tooth decay or infection is too extensive to be treated with a filling, crown, or root canal therapy."
+        }, {
+            "title": "Gum Disease",
+            "detail": "Advanced periodontal disease can weaken the teeth and supporting structures, necessitating extraction."
+        }, {
+            "title": "Overcrowding",
+            "detail": "To create space for orthodontic treatment and to align teeth properly."
+        }, {
+            "title": "Impacted Teeth",
+            "detail": "Teeth that are trapped in the gums or bone, such as wisdom teeth, may need to be extracted."
+        }, {
+            "title": "Trauma or Injury",
+            "detail": "Teeth that are fractured or damaged beyond repair."
+        }, {
+            "title": "Preparation for Dentures",
+            "detail": "Removing teeth to accomodate full or partial dentures."
+        }, {
+            "title": "Risk of Infection",
+            "detail": "For patients with compromised immune systems, teeth that pose a risk of infection might be extracted."
+        }],
+        "types": [{
+            "title": "Simple Extraction",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Performed on visible teeth. The dentist loosens the tooth with an instrument called an elevator and removes it with forceps."
+            }]
+        }, {
+            "title": "Surgical Extraction",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Necessary for teeth that are not easily accessible, such as impacted wisdom teeth. This involves making an incision in the gum and may require removing some bone around the tooth."
+            }]
+        }],
+        "procedure": [{
+            "title": "Examination and X-rays",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The dentist will examine your tooth and take X-rays to understand the tooth's position and condition and to plan the extraction."
+            }]
+        }, {
+            "title": "Anesthesia",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Local anesthesia is administered to numb the tooth and surrounding area. For surgical extractions or for anxious patients, sedation or general anesthesia may be used."
+            }]
+        }, {
+            "title": "Extraction",
+            "detail": [{
+                "subtitle": "Simple Extraction",
+                "subdetail": " The dentist uses an elevator to loosen the tooth and then removes it with forceps."
+            }, {
+                "subtitle": "Surgical Extraction",
+                "subdetail": "The dentist makes an incision in the gum, removes any obstructing bone, and extracts the tooth. Stitches may be used to close the incision."
+            }]
+        }, {
+            "title": "Post-Extraction Care",
+            "detail": [{
+                "subtitle": "Gauze Placement",
+                "subdetail": "A gauze pad is placed over the extraction site to control bleeding and help form a blood clot."
+            }, {
+                "subtitle": "Instructions",
+                "subdetail": "The dentist will provide instructions for aftercare, including pain management, diet, and activities to avoid."
+            }]
+        }],
+        "aftercare": [{
+            "title": "Bleeding",
+            "detail": "Bite gently on the gauze pad to reduce bleeding. Change the gauze as needed until the bleeding stops."
+        }, {
+            "title": "Pain Management",
+            "detail": "Use over-the-counter pain relievers or prescribed medication to manage pain. Apply an ice pack to the outside of the face to reduce swelling."
+        }, {
+            "title": "Diet",
+            "detail": "Stick to soft foods and avoid hot, spicy, or crunchy foods. Gradually reintroduce regular foods as the extraction site heals."
+        }, {
+            "title": "Oral Hygiene",
+            "detail": "Keep the mouth clean by rinsing gently with salt water after 24 hours. Avoid brushing the extraction site directly for a few days."
+        }, {
+            "title": "Avoid Straws and Smoking",
+            "detail": "Avoid using straws, smoking, or any activity that creates suction, as this can dislodge the blood clot and lead to a dry socket."
+        }, {
+            "title": "Rest",
+            "detail": "Take it easy for the first 24 hours and avoid strenuous activities"
+        }],
+        "potential": [{
+            "title": "Dry Socket",
+            "detail": "Occurs when the blood clot at the extraction site dislodges or dissolves before the wound heals, exposing bone and nerves. This can cause severe pain and delay healing."
+        }, {
+            "title": "Infection",
+            "detail": "Signs of infection include fever, severe pain, swelling, and pus discharge. Contact your dentist if you experience these symptoms."
+        }, {
+            "title": "Nerve Injury",
+            "detail": "Rarely, nerve injury can occur, causing numbness or tingling in the lips, tongue, or chin. This is usually temporary but can be permanent in rare cases."
+        }],
+        "followup": [{
+            "title": "Post-Extraction Check-Up",
+            "detail": "A follow-up appointment may be scheduled to ensure proper healing and to remove any stitches if necessary."
+        }, {
+            "title": "Monitoring Healing",
+            "detail": "Healing time varies, but it typically takes about 1-2 weeks for the initial healing. Complete healing of the bone may take several months."
+        }],
+        "alternatives": [{
+            "title": "Root Canal Therapy",
+            "detail": "Treats infections and saves the tooth."
+        }, {
+            "title": "Periodontal Treatment",
+            "detail": "Addresses gum disease and stabilizes teeth."
+        }, {
+            "title": "Orthodontic Treatment",
+            "detail": "Realigns teeth without extraction in some overcrowding cases."
+        }],
+        "conclusion": "Teeth extraction is a common and often necessary procedure to maintain oral health. Consulting with your dentist will help determine the best course of action and ensure you receive the appropriate care and follow-up for a successful recovery.",
+        "image": "../../public/one-extract.png"
+    },
+
+    {
+        "id": 9,
+        "name": "Surgery Case",
+        "desc": "Teeth surgery encompasses various dental surgical procedures aimed at treating conditions that affect the teeth, gums, and jawbone. These procedures range from common extractions to complex surgical interventions. Here’s an overview of the different types of teeth surgeries:",
+        "types": [{
+            "title": "Wisdom Teeth Removal",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Extraction of third molars (wisdom teeth) which often become impacted or cause overcrowding."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves making an incision in the gum, removing any bone blocking the tooth, and extracting the tooth."
+            }]
+        }, {
+            "title": "Dental Implants",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Replacement of missing teeth with artificial teeth anchored to the jawbone using titanium implants."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves inserting a titanium post into the jawbone, allowing it to fuse with the bone, and then attaching a crown."
+            }]
+        }, {
+            "title": "Root Canal Surgery(Apicoectomy)",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Performed when a standard root canal therapy is insufficient to treat an infection."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves removing the tip of the root (apex) and sealing the root canal from the root end."
+            }]
+        }, {
+            "title": "Periodontal Surgery",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Treats advanced gum disease and includes procedures like flap surgery, bone grafts, and tissue grafts."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves lifting the gums to remove tartar, reshaping the bone, and then suturing the gums back in place."
+            }]
+        }, {
+            "title": "Orthognathic Surgery(Jaw Surgery)",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Corrects irregularities of the jaw bones and realigns the jaws and teeth to improve functionality and appearance."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves making cuts in the jawbone and repositioning it, sometimes adding bone grafts."
+            }]
+        }, {
+            "title": "Tooth Extraction",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Removal of a tooth due to decay, damage or overcrowding"
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Can be simple (removal of a visible tooth) or surgical (removal of a tooth that is not easily accessible)."
+            }]
+        }, {
+            "title": "Crown Lengthening",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": "Adjusts the gum and bone level to expose more of the tooth structure."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves removing or repositioning gum tissue and possibly bone to expose more of the tooth."
+            }]
+        }, {
+            "title": "Frenectomy",
+            "detail": [{
+                "subtitle": "Description",
+                "subdetail": " Removal of the frenum, a small fold of tissue that restricts tongue or lip movement."
+            }, {
+                "subtitle": "Procedure",
+                "subdetail": "Involves cutting and removing the frenum to improve mobility and function."
+            }]
+        }],
+        "procedure": [{
+            "title": "Consulation",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The dentist or oral surgeon evaluates your dental condition, takes X-rays, and discusses the appropriate surgical options."
+            }]
+        }, {
+            "title": "Anesthesia",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Local anesthesia, sedation, or general anesthesia is administered depending on the complexity of the surgery."
+            }]
+        }, {
+            "title": "Surgery",
+            "detail": [{
+                "subtitle": "",
+                "subdetail":"The specific surgical procedure is performed following the planned steps."
+            }]
+        }, {
+            "title": "Post-Surgery Care",
+            "detail": [{
+                "subtitle": "Pain Management",
+                "subdetail": "Use prescribed or over-the-counter pain relievers as directed by your dentist."
+            }, {
+                "subtitle": "Swelling",
+                "subdetail": "Apply ice packs to reduce swelling."
+            }, {
+                "subtitle": "Diet",
+                "subdetail": "Stick to soft foods and avoid hot, spicy or crunchy food"
+            }, {
+                "subtitle": "Oral Hygiene",
+                "subdetail": "Keep the mouth clean by gently rinsing with salt water and following specific instructions for brushing and flossing."
+            }, {
+                "subtitle": "Avoid Strenuous Activity",
+                "subdetail": "Rest and avoid heavy lifting or strenuous activity for a few days."
+            }, {
+                "subtitle": "Follow Up",
+                "subdetail": "Attend follow-up appointments to monitor healing and remove stitches if necessary."
+            }]
+        }],
+        "potential": [{
+            "title": "Infection",
+            "detail": "Signs include fever, severe pain, swelling, and pus discharge. Contact your dentist if you experience these symptoms."
+        }, {
+            "title": "Dry Socket",
+            "detail": "Occurs when the blood clot at the extraction site dislodges, causing severe pain."
+        }, {
+            "title": "Nerve Damage",
+            "detail": "Rarely, nerve injury can occur, causing numbness or tingling. This is usually temporary but can be permanent in rare cases."
+        }, {
+            "title": "Excessive Bleeding",
+            "detail": "Persistent bleeding beyond the initial 24 hours should be reported to your dentist."
+        }],
+        "benefits": [{
+            "title": "Pain Relief",
+            "detail": "Addresses the root cause of dental pain and discomfort"
+        }, {
+            "title": "Improved Oral Health",
+            "detail": "Treats infections, gum disease, and other conditions to restore oral health."
+        }, {
+            "title": "Enhanced Functionality",
+            "detail": "Restores the ability to chew, speak, and smile with confidence."
+        }, {
+            "title": "Aesthetic Improvement",
+            "detail": "Enhances the appearance of your teeth and smile."
+        }],
+        "conclusion": "Teeth surgery is a critical component of dental care that addresses various conditions to improve oral health and overall quality of life. Consulting with a qualified dentist or oral surgeon will help determine the best surgical approach for your specific needs and ensure a successful outcome.",
+        "image": "../../public/one-surgery.png"
+    },
+
+    {
+        "id": 10,
+        "name": "Braces Binding",
+        "desc": "Braces binding, often referred to as the process of 'braces tightening' or 'braces adjustments' is a crucial part of orthodontic treatment involving braces. During these adjustments, the orthodontist makes changes to the braces to continue moving the teeth into their desired positions. Here's a detailed look at what braces binding entails:",
+        "practices": [{
+            "title": "Brackets",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Small metal or ceramic squares bonded to each tooth."
+            }]
+        }, {
+            "title": "Archwires",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Thin wires that connect the brackets and guide the teeth into position."
+            }]
+        }, {
+            "title": "Ligatures",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Small rubber bands or wires that hold the archwires to the brackets."
+            }]
+        }, {
+            "title": "Elastics",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Rubber bands that may be used to correct bite issues."
+            }]
+        }],
+        "procedure": [{
+            "title": "Initial Examination",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The orthodontist examines the progress of your treatment, evaluates the alignment of your teeth, and checks the condition of your braces."
+            }]
+        }, {
+            "title": "Removing Old Components",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The orthodontist removes or adjusts the existing ligatures or elastic bands."
+            }]
+        }, {
+            "title": "Adjusting the Archwire",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The old archwire is replaced with a new one or tightened to increase the pressure on the teeth, guiding them into the correct position."
+            }]
+        }, {
+            "title": "Reapplying Ligatures",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "New ligatures or elastic bands are placed to secure the archwire to the brackets."
+            }]
+        }, {
+            "title": "Additional Adjustments",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "If necessary, additional components like springs or rubber bands may be added to address specific alignment issues." 
+            }]
+        }],
+        "benefits": [{
+            "title": "Continued Tooth Movement",
+            "detail": "Regular adjustments ensure that teeth continue to move according to the treatment plan."
+        }, {
+            "title": "Improved Alignment",
+            "detail": "Helps in gradually correcting misalignments, overcrowding, and bite issues."
+        }, {
+            "title": "Customized Treatment",
+            "detail": "Adjustments allow for personalization of the treatment based on the progress and changes in the teeth and jaw."
+        }],
+        "frequency": [{
+            "title": "Typical Schedule",
+            "detail": "Braces adjustments are generally scheduled every 4-6 weeks, depending on the complexity of the treatment and the orthodontist’s recommendations."
+        }, {
+            "title": "Duration",
+            "detail": "Each adjustment appointment usually lasts 15-30 minutes."
+        }],
+        "aftercare": [{
+            "title": "Discomfort",
+            "detail": "Mild discomfort or pressure is common after adjustments. Over-the-counter pain relievers can help alleviate this."
+        }, {
+            "title": "Oral Hygiene",
+            "detail": "Maintain excellent oral hygiene by brushing and flossing regularly, especially around the brackets and wires."
+        }, {
+            "title": "Monitor for Issues",
+            "detail": "Watch for any signs of discomfort, loose brackets, or broken wires, and contact your orthodontist if any problems arise."
+        }],
+        "potential": [{
+            "title": "Discomfort",
+            "detail":"Temporary discomfort or soreness is normal but should subside within a few days."
+        }, {
+            "title": "Wire Breakage",
+            "detail": "Wires or brackets may break or become loose, requiring prompt attention from the orthodontist."
+        }, {
+            "title": "Oral Irritation",
+            "detail": "Braces may cause irritation to the inside of the cheeks or gums, which can usually be managed with orthodontic wax or soft foods."
+        }],
+        "consideration": [{"title": "", "detail" :"Braces binding is essential for the effectiveness of orthodontic treatment. It ensures that the braces continue to apply the appropriate amount of pressure to gradually move teeth into their correct positions. Regular adjustments are key to achieving the desired results and maintaining oral health throughout the treatment process."}],
+        "conclusion": "If you have specific concerns or questions about your braces adjustments, it’s best to consult with your orthodontist, who can provide personalized advice and care tailored to your treatment plan.",
+        "image": "../../public/one-braces.png"
+    },
+
+    {
+        "id": 11,
+        "name": "Teeth Implant",
+        "desc": "A dental implant is a prosthetic device used to replace missing teeth. It involves placing a titanium post into the jawbone, which acts as a replacement root for a crown or bridge. Here’s a detailed overview of dental implants:",
+        "practices": [{
+            "title": "Implant Post",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "A titanium screw-like post that is surgically placed into the jawbone."
+            }]
+        }, {
+            "title": "Abutment",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "A connector piece that attaches to the implant post and supports the replacement tooth."
+            }]
+        },  {
+            "title": "Crown",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "A custom-made artificial tooth that is attached to the abutment and mimics the appearance and function of a natural tooth."
+            }]
+        }],
+        "benefits": [{
+            "title": "Natural Look and Feel",
+            "detail": "Implants closely resemble natural teeth and provide a natural appearance and function."
+        }, {
+            "title": "Improved Functionality",
+            "detail": "They restore the ability to chew and speak properly"
+        }, {
+            "title": "Durability",
+            "detail": "Implants are highly durable and can last many years, often a lifetime with proper care."
+        }, {
+            "title": "Bone Preservation",
+            "detail": "Implants help maintain the jawbone structure and prevent bone loss that can occur with missing teeth."
+        }, {
+            "title": "Stability",
+            "detail": "Unlike removable dentures, implants are fixed and do not shift or slip."
+        }],
+        "procedure": [{
+            "title": "Initial Consulation",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "The dentist or oral surgeon examines your oral health, takes X-rays or 3D scans, and creates a treatment plan. Bone density and gum health are assessed to ensure suitability for implants."
+            }]
+        }, {
+            "title": "Implant Placement",
+            "detail": [{
+                "subtitle": "Preparation: ",
+                "subdetail":"The area where the implant will be placed is numbed with local anesthesia."
+            },{
+                "subtitle": "Surgical Placement: ",
+                "subdetail": " A small incision is made in the gum to access the jawbone. The implant post is then inserted into the bone."
+            },{
+                "subtitle": "Healing Period: ",
+                "subdetail": "The implant requires time to fuse with the bone through a process called osseointegration. This usually takes several months."
+            }]
+        }, {
+            "title": "Abutment Placement",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "After the implant has fully integrated with the bone, an abutment is placed on top of the implant. This may require a minor surgical procedure or be done during a subsequent appointment."
+            }]
+        }, {
+            "title": "Crown Fabrication and Placement",
+            "detail": [{
+                "subtitle": "",
+                "subdetail": "Impressions are taken to create a custom crown that matches the size, shape, and color of your natural teeth. The crown is attached to the abutment, completing the restoration."
+            }]
+        }],
+        "aftercare": [{
+            "title": "Oral Hygiene",
+            "detail": " Maintain good oral hygiene by brushing twice daily, flossing, and using mouthwash."
+        }, {
+            "title": "Regular Checkups",
+            "detail": "Visit your dentist regularly for checkups and professional cleanings."
+        }, {
+            "title": "Avoid Hard Foods",
+            "detail": "Avoid chewing on very hard objects that could damage the implant or crown."
+        }, {
+            "title": "Monitor for Issues",
+            "detail": "Report any unusual symptoms, such as pain or changes in the implant, to your dentist promptly."
+        }],
+        "potential": [{
+            "title": "Infection",
+            "detail": "Infection at the implant site, known as peri-implantitis, can occur. Good oral hygiene and regular checkups help prevent this."
+        }, {
+            "title": "Implant Failure",
+            "detail": "Rarely, the implant may fail to properly integrate with the bone or may become loose. This can be due to various factors, including inadequate bone density or infection."
+        }, {
+            "title": "Nerve Damage",
+            "detail": "In rare cases, placement of the implant may cause nerve damage, leading to numbness or tingling in the gums or lips."
+        }],
+        "alternatives": [{
+            "title": "Dental Bridges",
+            "detail": "Fixed prosthetics that replace one or more missing teeth by anchoring to adjacent natural teeth."
+        }, {
+            "title": "Dentures",
+            "detail": "Removable appliances that replace multiple missing teeth. They can be partial or full, depending on the number of missing teeth."
+        }, {
+            "title": "Fixed Partial Dentures (Bridges)",
+            "detail": "Supported by adjacent teeth or implants and used to fill the gap created by missing teeth."
+        }],
+        "consideration": [{
+            "title": "Cost",
+            "detail": "Dental implants can be more expensive than other tooth replacement options, but they are often considered a long-term investment in oral health."
+        }, {
+            "title": "Time",
+            "detail": "The process of getting implants takes several months from placement to final restoration due to the healing period required for osseointegration."
+        }, {
+            "title": "Bone Health",
+            "detail": "Adequate bone density is necessary for successful implant placement. In some cases, bone grafting may be required if there is insufficient bone."
+        }],
+        "conclusion": "Dental implants are a highly effective and long-lasting solution for replacing missing teeth, providing a natural look and function while preserving overall oral health. Consulting with your dentist or oral surgeon will help determine if dental implants are the right option for you and guide you through the process.",
+        "image": "../../public/one-implant.png"
+    },
+
+    {
+        "id": 12,
+        "name": "Others",
+        "desc": "At Agni Dental, we offer a diverse range of specialized dental services beyond routine care to ensure your smile remains healthy and vibrant. Our additional services include professional teeth whitening for a brighter, more radiant smile, and dental veneers or bonding to address imperfections such as chips or discoloration. We also provide gum contouring to enhance your gum line and orthodontic treatments, including braces and clear aligners, to correct alignment issues. For those with more complex needs, our root canal therapy, dental crowns and bridges, and oral surgery options offer effective solutions for preserving and restoring your dental health. With our comprehensive approach and state-of-the-art technology, we are dedicated to delivering exceptional care tailored to your unique needs, ensuring a confident and beautiful smile for years to come.",
+        "image": "../../public/one-others.png"
+    }
+]

@@ -1,7 +1,12 @@
+import ServicesBreadCrumb from "./ServicesBreadCrumb"
+import './Services.css'
+import AllServices from "./AllServices"
+
 const Services = () => {
   return (
     <div>
-      <h1>Services</h1>
+      <ServicesBreadCrumb />
+      <AllServices />
     </div>
   )
 }
