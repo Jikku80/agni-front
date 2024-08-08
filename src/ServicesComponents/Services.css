@@ -17,6 +17,10 @@
     color: gray;
 }
 
+.oneimage{
+    border-radius: .5rem;
+}
+
 @media screen and (max-width: 992px) {
     .servDiv{
         display: flex !important;
@@ -41,5 +45,15 @@
     .removeWidth{
         width: 100% !important;
         margin-bottom: 4% !important;
+    }
+
+    .oneimage{
+        width: 90vw !important;
+    }
+
+    .imageCol{
+        width: 100vw !important;
+        display: flex;
+        align-items: center;
     }
 }

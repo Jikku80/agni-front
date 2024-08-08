@@ -3,11 +3,16 @@ import ContactForm from './ContactForm'
 import style from 'styled-components';
 import './contact.css';
 import ContactMap from './ContactMap';
+import ContactCard from './ContactCard';
 
 const FlexDiv = style.div`
   margin-left : 5%;
   margin-right : 5%;
-  margin-top : 2%;
+  margin-top : 1%;
+`
+
+const Row = style.div`
+  display : flex;
 `
 
 interface Props{
@@ -19,7 +24,10 @@ const Contact = ({setLoading} : Props) => {
     <div>
       <ContactBreadCrumb />
       <FlexDiv>
-        <ContactForm setLoading={setLoading} />
+        <Row className='removeRow'>
+          <ContactForm setLoading={setLoading} />
+          <ContactCard />
+        </Row>
         <ContactMap />
       </FlexDiv>
     </div>

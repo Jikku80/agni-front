@@ -22,6 +22,8 @@ const Anchor = style.a`
 const BookButton = style.button`
   border-radius : 1rem;
   padding: .5%;
+  padding-right: 1%;
+  padding-left: 1%;
   display : flex;
   align-items: center;
   justify-content: space-between;

@@ -70,7 +70,7 @@ const ServicesDetail = () => {
             <p>{list[0].desc}</p>
             <Button w="fit-content" colorScheme='blue' mt={4} onClick={()=> navigate('/contact-us')}>Book Appointment</Button>
           </Column>
-          <Column>
+          <Column className='imageCol'>
             <img className='oneimage' src={list[0].image} />
           </Column>
         </Row>

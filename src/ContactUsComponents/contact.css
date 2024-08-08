@@ -18,11 +18,9 @@
 }
 
 .contactForm{
-    width: 50% !important;
-    background-color: whitesmoke;
     padding: 2%;
     margin: 0 !important;
-    margin-top: 2% !important;
+    padding-right: 0%;
 }
 
 .bkSelect{
@@ -100,8 +98,13 @@
 }
 
 @media screen and (max-width: 992px) {
-    .contactForm{
+    .con-flex {
         width: 100% !important;
+    }
+
+    .mapImage{
+        width: 100% !important;
+        height: 25vh !important;
     }
 
     .eInput, .pInput, .dInput, .tAvailable{

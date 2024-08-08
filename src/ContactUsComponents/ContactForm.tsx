@@ -7,6 +7,10 @@ import style from 'styled-components';
 import io from 'socket.io-client'
 import { CiCalendar } from "react-icons/ci";
 
+const FlexDiv = style.div`
+    width : 60vw;
+`
+
 const Modal = style.div`
     height : 100vh;
     width : 100vw;
@@ -54,7 +58,9 @@ const Head = style.p`
 
 const Gray = style.p`
     color : gray;
+    margin-bottom: 2%;
 `
+
 
 interface Props{
     setLoading : React.Dispatch<React.SetStateAction<boolean>>
@@ -113,10 +119,10 @@ const ContactForm = ({setLoading} : Props) => {
     }
     
   return (
-    <>
-        <Head>Appointment Form</Head>    
-        <Gray>Book yourself the care you always wanted with Agni Dental.</Gray>
+    <FlexDiv className="con-flex">
         <form onSubmit={handleSubmit(onSubmit)}>
+            <Head>Appointment Form</Head>    
+            <Gray>Book yourself the care you always wanted with Agni Dental.</Gray>
             <FormControl className="bookForm contactForm" m={4}>
                 <FormLabel className="sizedlabel">Branch</FormLabel>
                 <select className="bkSelect" defaultValue={'pulchowk'} {...register('branch', {required: true})}>
@@ -216,7 +222,7 @@ const ContactForm = ({setLoading} : Props) => {
                 }}>Close</ModalButton>
             </ModalBody>
         </Modal>
-    </>
+    </FlexDiv>
   )
 }
 
