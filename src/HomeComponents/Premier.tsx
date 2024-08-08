@@ -74,7 +74,7 @@ const Caption = style.p`
     padding : 4%;
     bottom : 0vh;
     width : 100%;
-    background-color : #0000008c;
+    background-color : #0003;
     text-align : center;
     color : white;
     border-bottom-left-radius : .5rem;

@@ -21,6 +21,7 @@
     padding: 2%;
     margin: 0 !important;
     padding-right: 0%;
+    padding-left : 0%;
 }
 
 .bkSelect{
@@ -95,6 +96,10 @@
     justify-content: flex-start;
     margin-right: 16px;
     margin-top: 16px;
+}
+
+.gray{
+    color: gray !important;
 }
 
 @media screen and (max-width: 992px) {
